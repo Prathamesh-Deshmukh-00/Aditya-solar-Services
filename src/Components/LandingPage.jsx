@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Sun, Phone, Mail, Menu, X, Star, ArrowRight, Zap, Shield, Wrench, Check, Info, Clock, MapPin } from 'lucide-react';
+import { SolarSquarePromo, Footer ,ModernSolarFAQ} from "./index.js";
 
-export default function AdityaSolarServices() {
+export default function AdityaSolarServices({setClick, setTermuse}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -66,7 +67,7 @@ export default function AdityaSolarServices() {
                 <Sun className="w-8 h-8 text-orange-500" />
               </div>
               <div>
-                <h1 className="text-lg md:text-xl font-bold">ADITYA SOLAR SERVICES</h1>
+                <h1 className="text-lg md:text-xl font-bold">ADITYA SOLAR ENERGY</h1>
                 <p className="text-xs text-blue-200 italic hidden sm:block">Your Partner in Sustainable Solar Solutions™</p>
               </div>
             </div>
@@ -172,7 +173,7 @@ export default function AdityaSolarServices() {
               
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label className="block text-sm text-start  font-medium text-gray-700 mb-1.5">
                     Full name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -185,7 +186,7 @@ export default function AdityaSolarServices() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label className="block text-sm text-start font-medium text-gray-700 mb-1.5">
                     WhatsApp number <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -198,7 +199,7 @@ export default function AdityaSolarServices() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label className="block text-sm text-start  font-medium text-gray-700 mb-1.5">
                     Pin code <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -239,10 +240,13 @@ export default function AdityaSolarServices() {
                     type="checkbox" 
                     id="terms"
                     className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    defaultChecked
+                    required
                   />
-                  <label htmlFor="terms" className="text-xs text-gray-600">
-                    I agree to Aditya Solar's <a href="#" className="text-blue-600 underline">terms of service</a> & <a href="#" className="text-blue-600 underline">privacy policy</a>
+                  <label htmlFor="terms" className="text-xs text-gray-600" >
+                    I agree to Aditya Solar's 
+                    <a href="#" className="text-blue-600 underline" onClick={()=>{ setTermuse(true)}} > terms of service</a>
+                     & 
+                     <a href="#" onClick={()=>{ setClick(true)}} className="text-blue-600 underline">privacy policy</a>
                   </label>
                 </div>
 
@@ -263,7 +267,7 @@ export default function AdityaSolarServices() {
                 <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
               ))}
             </div>
-            <span className="text-white font-medium text-sm">4.8/5 Google Rating • 1000+ reviews</span>
+            <span className="text-white font-medium text-sm">4.8/5 Google Rating • 10+ reviews</span>
           </div>
         </div>
       </section>
@@ -328,10 +332,16 @@ export default function AdityaSolarServices() {
                     <Phone className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-gray-900">Phone</p>
+                      <div className='flex flex-col'>
+                      <a href="tel:9422809337" className="text-orange-500 hover:underline text-lg font-bold">
+                        9422809337
+                      </a>
                       <a href="tel:9284287565" className="text-orange-500 hover:underline text-lg font-bold">
                         9284287565
                       </a>
+                      </div>
                     </div>
+
                   </div>
 
                   <div className="flex items-start space-x-4">
@@ -358,55 +368,16 @@ export default function AdityaSolarServices() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                  <Sun className="w-6 h-6 text-orange-500" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">Aditya Solar Services</h3>
-                  <p className="text-xs text-blue-200 italic">Sustainable Solar Solutions™</p>
-                </div>
-              </div>
-              <p className="text-blue-200 text-sm">
-                Your trusted partner for professional solar panel installation and maintenance services.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4">Our Services</h4>
-              <ul className="space-y-2 text-blue-200 text-sm">
-                <li>Solar Panel Installation</li>
-                <li>On-Grid Systems</li>
-                <li>Off-Grid Systems</li>
-                <li>Maintenance & Repairs</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4">Contact Us</h4>
-              <div className="space-y-2 text-blue-200 text-sm">
-                <p className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4" />
-                  <span>9284287565</span>
-                </p>
-                <p className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4" />
-                  <span>Mon-Sat: 9 AM - 6 PM</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="border-t border-blue-700 mt-8 pt-8 text-center text-blue-200 text-sm">
-            <p>© 2025 Aditya Solar Services. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+       <SolarSquarePromo/>
+
+       {/* Freqreltly asked questions  */}
+       <ModernSolarFAQ/>
+
+ {/* Footer section */}
+   <Footer/>
+
+      
+     
 
       {/* Sticky Mobile Footer */}
       {showStickyFooter && (
