@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Search, Sun, Settings, DollarSign } from 'lucide-react';
 
 export default function ModernSolarFAQ() {
-  const [activeTab, setActiveTab] = useState('maintenance');
+  const [activeTab, setActiveTab] = useState('general');
   const [openQuestion, setOpenQuestion] = useState('maintenance-0');
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -13,58 +13,264 @@ export default function ModernSolarFAQ() {
     { id: 'economics', label: 'Economics', icon: DollarSign, shortLabel: 'Economics' }
   ];
 
-  const faqData = {
-    general: [
-      {
-        question: 'What is solar energy?',
-        answer: 'Solar energy is power derived from the sun\'s radiation. It can be converted into electricity or heat using solar panels and other solar technologies.'
-      },
-      {
-        question: 'How do solar panels work?',
-        answer: 'Solar panels work by absorbing sunlight with photovoltaic cells, generating direct current (DC) energy, and then converting it to usable alternating current (AC) energy with the help of inverter technology.'
-      },
-      {
-        question: 'Is solar energy renewable?',
-        answer: 'Yes, solar energy is completely renewable and sustainable. The sun provides more energy in one hour than the entire world uses in a year, making it an inexhaustible resource for our energy needs.'
-      }
-    ],
-    maintenance: [
-      {
-        question: 'What is the life of a rooftop solar system?',
-        answer: 'The Solar Plant life is 25 years. The main components are solar panels and inverters. Solar panels have a warranty of 25 years and inverter warranty ranges from 5-12 years.'
-      },
-      {
-        question: 'Do Solar Rooftop projects have a high maintenance cost?',
-        answer: 'No, solar rooftop systems have minimal maintenance costs. They require occasional cleaning and periodic inspections to ensure optimal performance. Most maintenance involves simple cleaning of the panels to remove dust and debris.'
-      },
-      {
-        question: 'Can Solar projects damage my roof?',
-        answer: 'When installed properly by certified professionals, solar panels will not damage your roof. In fact, they can protect the portion of the roof they cover. Professional installers ensure proper mounting and waterproofing to maintain roof integrity.'
-      },
-      {
-        question: 'Do I need to clean my Solar plant?',
-        answer: 'Yes, periodic cleaning is recommended to maintain optimal efficiency. Dust, leaves, and bird droppings can reduce panel performance. Cleaning frequency depends on your location and environmental factors, typically 2-4 times per year.'
-      },
-      {
-        question: 'My roof is not made of concrete; can I still install a Solar Project?',
-        answer: 'Yes, solar panels can be installed on various roof types including metal, tile, and asphalt shingle roofs. Professional installers use appropriate mounting systems designed for different roof materials to ensure safe and secure installation.'
-      }
-    ],
-    economics: [
-      {
-        question: 'What is the return on investment for solar panels?',
-        answer: 'The ROI for solar panels typically ranges from 5-10 years, depending on your location, electricity rates, system size, and available incentives. After the payback period, you enjoy essentially free electricity for the remaining life of the system.'
-      },
-      {
-        question: 'Are there government incentives for solar installation?',
-        answer: 'Yes, many governments offer incentives such as tax credits, rebates, and subsidies to encourage solar adoption. These incentives vary by country and region, significantly reducing the initial installation cost.'
-      },
-      {
-        question: 'How much can I save with solar panels?',
-        answer: 'Savings vary based on your location, energy consumption, and system size. On average, homeowners can save 50-90% on their electricity bills. Over 25 years, this can amount to substantial savings while also increasing property value.'
-      }
-    ]
-  };
+ const faqData = {
+  general: [
+    {
+      question: 'What is Aditya Solar Energy?',
+      answer: `Aditya Solar Energy designs and installs solar panel systems for homes, housing societies and businesses across Maharashtra.
+
+1. Over 3 years of dedicated experience in the solar industry.
+2. Committed to making solar energy accessible and affordable for every household and business.
+3. Mission: To drive the clean energy revolution forward, one rooftop at a time.
+4. Government-authorized vendor with all necessary certifications and registrations.
+5. Trusted partner for reliable and high-quality solar solutions.
+6. We believe solar reduces electricity costs and creates a sustainable future for generations to come.`
+    },
+    {
+      question: 'What is a solar rooftop system?',
+      answer: `A solar rooftop system is a combination of many components that convert sunlight into usable electricity.
+
+Components include:
+1. Solar panels with PV cells
+2. Solar inverter
+3. Solar panel mounting structures
+4. AC and DC cables
+5. AC combiner box
+6. DC combiner box
+7. Earthing cables
+8. MC4 connectors`
+    },
+    {
+      question: 'How does a solar rooftop system work?',
+      answer: `A solar rooftop system works on the principle of converting sunlight into electricity (the photovoltaic effect).
+
+1. Sunlight falls on the PV cells in the solar panel.
+2. The sunlight is converted into DC electricity.
+3. The inverter converts DC power into usable AC power.
+4. The AC electricity is fed into a bidirectional meter.
+5. It supplies power to the house.
+6. Excess power is exported to the DISCOM (grid).
+7. If solar power is insufficient, power is imported from the grid.`
+    },
+    {
+      question: 'How to apply for a solar rooftop subsidy?',
+      answer: `Under the DBT (Direct Benefit Transfer) scheme, applying for a solar rooftop subsidy is simple. Follow these steps:
+
+1. Visit the National Portal for Rooftop Solar website — https://solarrooftop.gov.in/
+2. Download and install the Sandes app from the website.
+3. Register as a customer on the Sandes app.
+4. A DISCOM official will visit your home to check technical feasibility.
+5. After approval, you’ll receive a No Objection Certificate (NOC).
+6. Choose Aditya Solar Energy as your solar installation company.
+7. Discuss project details and sign the agreement.
+8. After receiving payment, installation begins.
+9. We’ll submit a work completion report and apply for net meter installation.
+10. Receive the commissioning certificate.
+11. Upload bank details and a cancelled cheque on the National Portal.
+12. The subsidy amount will be credited to your bank account within 30 days.
+
+Aditya Solar Energy assists you throughout this process to ensure a smooth and hassle-free subsidy claim.`
+    },
+    {
+      question: 'What is the price of a solar system in India without a subsidy?',
+      answer: `Aditya Solar Energy offers affordable and high-quality solar solutions.
+
+Pricing for Maharashtra:
+1. 3 kW rooftop solar system: ₹1,30,000
+2. 5 kW rooftop solar system: ₹1,70,000
+
+For other system sizes (2 kW, 4 kW, 7 kW, or 10 kW), contact us for a customized quote. We provide multiple options based on your energy requirements and budget.`
+    },
+    {
+      question: 'Why should I go solar?',
+      answer: `1. Save money on monthly electric bills.
+2. Contribute to protecting the planet by going green.
+3. Solar energy is renewable, clean, and non-polluting.
+4. Emits no greenhouse gases and mitigates climate change.
+5. With Aditya Solar Energy’s affordable pricing and quality service, solar is now accessible for all Maharashtra residents.`
+    },
+    {
+      question: 'Is solar power safe?',
+      answer: `1. The electricity produced by a solar system is the same as grid electricity — only the source differs.
+2. Solar power is among the safest sources of electricity.
+3. It is non-hazardous and does not release any toxic or harmful gases.`
+    },
+    {
+      question: 'What do I need to install a rooftop solar system?',
+      answer: `To qualify for a solar system, you need:
+1. Empty space on your roof.
+2. Access to your rooftop.
+
+Process:
+3. Fill out the enquiry form on our website or contact us directly.
+4. Our team will visit to discuss your requirement.
+5. Once finalized, we handle design, installation, and maintenance.
+
+Aditya Solar Energy, based in Telhara, Akola, serves customers across Maharashtra with prompt service.`
+    },
+    {
+      question: 'What are the different types of Solar systems?',
+      answer: `There are 3 types of solar systems:
+
+1. On-grid solar systems:
+   - Connected to the public electricity grid.
+   - Excess power is exported to the grid.
+   - Net-Metering Policy applies in Maharashtra.
+
+2. Off-grid solar systems:
+   - Not connected to the grid.
+   - Require battery storage.
+   - Designed to generate enough power even during low sunlight.
+
+3. Hybrid solar systems:
+   - Combine solar and battery storage.
+   - Store energy generated during the day for night-time use.
+   - Grid acts as backup when stored energy is depleted.`
+    },
+    {
+      question: 'Do solar panels generate electricity even during monsoon and winter?',
+      answer: `1. Yes, solar panels produce electricity even in cloudy or rainy weather.
+2. Efficiency reduces slightly, but this is accounted for in design.
+3. Even during Maharashtra’s monsoon season, panels continue to generate power.`
+    },
+    {
+      question: 'Does a rooftop solar PV generate power during a power failure?',
+      answer: `1. No, rooftop solar systems do not generate electricity during blackouts.
+2. This is to protect people repairing damaged grids.
+3. Aditya Solar Energy offers Li-ion battery storage for backup.
+4. Stored electricity can be used during the night or power failure.`
+    },
+    {
+      question: 'How much electricity does a solar plant produce?',
+      answer: `1. Depends on sunlight, plant design, and component quality.
+2. On average, 1 kW solar plant produces 4 units per day.
+3. Maharashtra’s strong sunlight makes it ideal for solar generation.`
+    },
+    {
+      question: 'What kind of appliances can I use on Solar Power?',
+      answer: `1. Can power both heavy industrial machines and home appliances.
+2. Electricity is synchronized with grid/diesel generators.
+3. Ensures no voltage fluctuations regardless of usage.`
+    },
+    {
+      question: 'How do I decide what size of plant I need?',
+      answer: `The size depends on:
+1. Your electricity consumption.
+2. Available shadow-free area.
+3. Solar irradiation in your area.
+
+Aditya Solar Energy conducts an assessment to recommend the best size for maximum savings.`
+    },
+    {
+      question: 'What is Net metering?',
+      answer: `1. Net Metering allows solar owners to earn credits for power added to the grid.
+2. Excess power sent to the grid can be taken back when needed.
+3. The bi-directional meter runs backward when excess power is exported.
+4. You are billed only for the net power used.
+5. Available for both residential and commercial consumers in Maharashtra.`
+    }
+  ],
+
+  maintenance: [
+    {
+      question: 'What is the life of a rooftop solar system?',
+      answer: `1. The solar plant’s lifespan is 25 years.
+2. Solar panels: 25-year warranty.
+3. Inverters: 5–12-year warranty.
+4. Aditya Solar Energy uses high-quality components for long-term efficiency.`
+    },
+    {
+      question: 'Do Solar Rooftop projects have a high maintenance cost?',
+      answer: `1. No, solar systems have very low maintenance costs.
+2. Minimal moving parts reduce maintenance needs.
+3. Aditya Solar Energy provides 5 years of free maintenance.`
+    },
+    {
+      question: 'Can Solar projects damage my roof?',
+      answer: `1. No, Aditya Solar Energy ensures no damage during installation.
+2. We use non-penetrating structures and waterproofing methods.
+3. We are government-authorized with proper certifications.`
+    },
+    {
+      question: 'Do I need to clean my Solar plant?',
+      answer: `1. Clean the panels 1–2 times a month.
+2. Best time: early morning or night.
+3. Use a clean wet cloth, nylon brush, or sponge.
+4. Avoid detergents or metal brushes.
+5. During the 5-year free maintenance period, our team assists with cleaning.`
+    },
+    {
+      question: 'My roof is not made of concrete; can I still install a Solar Project?',
+      answer: `1. Yes, solar can be installed on almost any roof type.
+2. For brittle materials like asbestos, we provide safe solutions.
+3. Aditya Solar Energy ensures secure installation for all roof types.`
+    }
+  ],
+
+  economics: [
+    {
+      question: 'How much does a solar Plant cost?',
+      answer: `Pricing at Aditya Solar Energy (after subsidy):
+
+1. 3 kW rooftop system: ₹1,12,000
+2. 5 kW rooftop system: ₹1,67,000
+
+Includes:
+3. High-quality components
+4. Professional installation
+5. 5 years of free maintenance`
+    },
+    {
+      question: 'What is the break-even period for Solar rooftop projects?',
+      answer: `1. Typical breakeven: 3–5 years.
+2. Project life: 25 years.
+3. You start saving from day one.
+4. Aditya Solar Energy ensures quick ROI through affordable installation.`
+    },
+    {
+      question: 'Are there any subsidies provided by the government for solar projects?',
+      answer: `1. No subsidies for commercial entities.
+2. Residential rooftop projects in Maharashtra receive subsidies within 30 days.
+3. Aditya Solar Energy assists with the entire subsidy process.
+
+Subsidy slabs:
+────────────────────────────
+Segment          | Size | Subsidy
+────────────────────────────
+Individual house | 1kW  | ₹30,000
+Individual house | 2kW  | ₹60,000
+Individual house | 3kW+ | ₹78,000
+────────────────────────────
+
+We guide you through every step, ensuring a hassle-free claim.`
+    },
+    {
+      question: 'What is the difference between CapEx and OpEx models?',
+      answer: `1. CapEx Model:
+   - Consumer invests the full amount.
+   - Solar EPC company installs and maintains the system.
+   - Ownership lies with the consumer.
+
+2. OpEx Model:
+   - Investor/developer invests in the system.
+   - Consumer pays only for energy used (via PPA agreement).
+   - Suitable for users wanting zero upfront cost.
+
+Aditya Solar Energy helps you choose the best model for your needs.`
+    },
+    {
+      question: 'Are financing options available for Solar Rooftop projects?',
+      answer: `Yes, Aditya Solar Energy provides attractive EMI options.
+
+1. Interest Rate: 6% per annum
+2. Repayment Period: Up to 10 years
+3. Minimal documentation required
+4. Start saving immediately while paying in easy monthly installments.
+5. Savings on electricity often cover the EMI amount.`
+    }
+  ]
+};
+
 
   useEffect(() => {
     if (searchTerm.trim() === '') {
@@ -174,7 +380,7 @@ export default function ModernSolarFAQ() {
                     }}
                     className={`flex flex-col md:flex-row items-center justify-center gap-1.5 md:gap-2 px-2 md:px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       activeTab === tab.id
-                        ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg'
+                        ? 'bg-gradient-to-r from-blue-900 to-blue-800 text-white shadow-lg'
                         : 'text-gray-600 hover:bg-gray-50'
                     }`}
                   >
@@ -186,7 +392,8 @@ export default function ModernSolarFAQ() {
             </div>
           )}
 
-          {/* FAQ Cards */}
+          
+  {/* FAQ Cards */}
           <div className="space-y-3">
             {displayData.length > 0 ? (
               displayData.map((faq) => (
@@ -224,13 +431,13 @@ export default function ModernSolarFAQ() {
                   </button>
                   
                   <div
-                    className={`overflow-hidden transition-all duration-500 ${
-                      openQuestion === faq.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    className={`transition-all duration-500 ${
+                      openQuestion === faq.id ? 'opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
                     }`}
                   >
                     <div className="px-4 md:px-5 pb-4 md:pb-5 pl-12 md:pl-14">
                       <div className="bg-gradient-to-br from-blue-50 to-orange-50 rounded-lg p-4 border border-blue-100">
-                        <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                        <p className="text-sm md:text-base text-gray-700 leading-relaxed whitespace-pre-line">
                           {highlightText(faq.answer, searchTerm)}
                         </p>
                       </div>
@@ -249,20 +456,24 @@ export default function ModernSolarFAQ() {
             )}
           </div>
 
-          {/* Footer CTA */}
-          <div className="mt-8 md:mt-12">
-            <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-5 md:p-6 text-center shadow-xl">
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-                <div className="text-white">
-                  <p className="font-bold text-base md:text-lg mb-1">Still have questions?</p>
-                  <p className="text-sm text-blue-100">Our solar experts are ready to assist you</p>
-                </div>
-                <button className="bg-white text-blue-700 px-6 py-3 rounded-lg font-bold hover:shadow-lg hover:scale-105 transition-all whitespace-nowrap">
-                  Contact Us
-                </button>
-              </div>
-            </div>
-          </div>
+{/* Footer CTA */}
+<div className="mt-8 md:mt-12">
+  <div className="bg-gradient-to-r from-blue-900 to-blue-800 rounded-xl p-5 md:p-6 text-center shadow-xl">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+      <div className="text-white">
+        <p className="font-bold text-base md:text-lg mb-1">Still have questions?</p>
+        <p className="text-sm text-blue-100">Our solar experts are ready to assist you</p>
+      </div>
+      <a
+        href="tel:9422809337"
+        className="bg-white text-blue-700 px-6 py-3 rounded-lg font-bold hover:shadow-lg hover:scale-105 transition-all whitespace-nowrap"
+      >
+        Contact Us
+      </a>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
     </div>

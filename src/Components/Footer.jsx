@@ -24,13 +24,48 @@ function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
-              <div className="flex items-start space-x-2">
-                <Phone className="w-4 h-4 mt-1 flex-shrink-0" />
-                <div className="text-sm">
-                  <p>9422809337</p>
-                  <p>9284287565</p>
-                </div>
-              </div>
+<div className="flex items-start space-x-2">
+  <Phone className="w-4 h-4 mt-1 flex-shrink-0 text-white" />
+  <div className="text-sm flex flex-col space-y-1">
+    <p>
+      <a
+        href="tel:9422809337"
+        className="text-white underline cursor-pointer"
+        style={{
+          animation: "highlight 1.5s infinite alternate"
+        }}
+      >
+        9422809337
+      </a>
+    </p>
+    <p>
+      <a
+        href="tel:9284287565"
+        className="text-white underline cursor-pointer"
+        style={{
+          animation: "highlight 1.5s infinite alternate"
+        }}
+      >
+        9284287565
+      </a>
+    </p>
+  </div>
+
+  <style>
+    {`
+      @keyframes highlight {
+        0% { transform: translateY(0) scale(1); }
+        50% { transform: translateY(-6px) scale(1.05); }
+        100% { transform: translateY(0) scale(1); }
+      }
+    `}
+  </style>
+</div>
+
+
+
+
+
               <div className="flex items-start space-x-2">
                 <Mail className="w-4 h-4 mt-1 flex-shrink-0" />
                 <a
