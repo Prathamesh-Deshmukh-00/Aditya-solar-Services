@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Sun, Phone, Mail, Menu, X, Star, ArrowRight, Zap, Shield, Wrench, Check, Info, Clock, MapPin } from 'lucide-react';
-import { SolarSquarePromo, Footer ,ModernSolarFAQ ,Header,SolarTimeline} from "./index.js";
+import { SolarSquarePromo, Footer ,ModernSolarFAQ ,Header,SolarTimeline,SolarBuyingGuide,OnGridSolarSystem} from "./index.js";
 
 export default function AdityaSolarServices({setClick, setTermuse}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -352,8 +352,8 @@ export default function AdityaSolarServices({setClick, setTermuse}) {
  {/* Footer section */}
    <Footer/>
 
-      
-     
+      <SolarBuyingGuide/>
+     <OnGridSolarSystem/>
 
       {/* Sticky Mobile Footer */}
       {showStickyFooter && (
