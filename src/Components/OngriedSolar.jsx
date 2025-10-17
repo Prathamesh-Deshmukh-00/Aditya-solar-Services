@@ -149,17 +149,39 @@ export default function SolarBuyingGuide() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-orange-50">
+       {/* Hero Banner */}
+  <div className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white overflow-hidden">
+    <div className="relative max-w-7xl mx-auto px-4 py-12 sm:py-16 lg:py-20">
+      <div className="text-center">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3">On-Grid Solar System Buying Guide</h2>
+        <p className="text-base sm:text-lg lg:text-xl opacity-95 mb-2">
+          Prices, Subsidy, Advantages and Disadvantages Disclosed
+        </p>
+      </div>
+    </div>
+
+    <div className="absolute bottom-0 left-0 right-0">
+      <svg
+        viewBox="0 0 1440 80"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full"
+      >
+        <path
+          d="M0 80L60 70C120 60 240 40 360 30C480 20 600 20 720 25C840 30 960 40 1080 45C1200 50 1320 50 1380 50L1440 50V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0Z"
+          fill="#F9FAFB"
+        />
+      </svg>
+    </div>
+  </div>
       {/* Header */}
-      <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-4">
+      {/* <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center mb-4">
-            <Sun className="w-12 h-12 mr-3 text-yellow-400" />
-            <h1 className="text-4xl md:text-5xl font-bold">Aditya Solar Energy</h1>
-          </div>
+
           <h2 className="text-2xl md:text-3xl font-semibold mb-3">On-Grid Solar System Buying Guide</h2>
           <p className="text-lg md:text-xl opacity-90">Prices, Subsidy, Advantages and Disadvantages Disclosed</p>
         </div>
-      </header>
+      </header> */}
 
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 py-12">
@@ -380,14 +402,7 @@ export default function SolarBuyingGuide() {
             </table>
           </div>
 
-          <div className="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-4">
-            <p className="font-bold text-yellow-900 mb-2">🎉 Special for UP Residents!</p>
-            <p className="text-gray-700 mb-2">The state government of UP offers an additional subsidy on top of the central government subsidy:</p>
-            <ul className="list-disc list-inside space-y-1 text-gray-700 ml-4">
-              <li><strong>1-2 kW systems:</strong> Rs. 15,000/kW</li>
-              <li><strong>Systems ≥2 kW:</strong> Rs. 30,000</li>
-            </ul>
-          </div>
+
         </section>
 
         {/* Advantages Section */}
@@ -549,17 +564,7 @@ export default function SolarBuyingGuide() {
 
       </main>
 
-      {/* Footer */}
-      <footer className="bg-blue-900 text-white py-8 px-4 mt-12">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center mb-4">
-            <Sun className="w-8 h-8 mr-2 text-yellow-400" />
-            <h3 className="text-2xl font-bold">Aditya Solar Energy</h3>
-          </div>
-          <p className="opacity-90">Your Trusted Partner in Solar Solutions</p>
-          <p className="text-sm mt-4 opacity-75">© 2025 Aditya Solar Energy. All rights reserved.</p>
-        </div>
-      </footer>
+  
     </div>
   );
 }

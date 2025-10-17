@@ -1,6 +1,7 @@
 import React from "react";
 import { Calculator, Wind, Settings, FileText } from "lucide-react";
 import solar_installitation from "../Images/solar_installitation.webp";
+import { Link, Navigate } from "react-router-dom";
 
 export default function SolarSquarePromo() {
   return (
@@ -198,12 +199,12 @@ export default function SolarSquarePromo() {
               Get your free consultation today and start saving on electricity
               bills
             </p>
-            <a
-              href="#hero-form"
+            <Link
+              to="/"
               className="inline-block bg-orange-500 text-white font-bold px-8 py-3 rounded-full hover:bg-orange-600 transform hover:scale-105 transition text-sm md:text-base"
             >
               Book Free Consultation
-            </a>
+            </Link>
           </div>
         </div>
       </div>

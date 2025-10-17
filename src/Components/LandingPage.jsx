@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Sun, Phone, Mail, Menu, X, Star, ArrowRight, Zap, Shield, Wrench, Check, Info, Clock, MapPin } from 'lucide-react';
-import { SolarSquarePromo, Footer ,ModernSolarFAQ ,Header,SolarTimeline,SolarBuyingGuide,OnGridSolarSystem} from "./index.js";
+import { SolarSquarePromo, Footer ,ModernSolarFAQ ,Header,SolarTimeline,SolarBuyingGuide,OnGridSolarSystem ,Services} from "./index.js";
 
 export default function AdityaSolarServices({setClick, setTermuse}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,12 +40,7 @@ export default function AdityaSolarServices({setClick, setTermuse}) {
     { value: '>8000', label: 'More than ₹8000' }
   ];
 
-  const keyServices = [
-    { title: 'Solar Panel Installation', icon: <Sun className="w-8 h-8" />, desc: 'Professional installation of high-efficiency solar panels' },
-    { title: 'On-Grid & Off-Grid Systems', icon: <Zap className="w-8 h-8" />, desc: 'Both grid-connected and standalone solar solutions' },
-    { title: 'Residential & Commercial', icon: <Shield className="w-8 h-8" />, desc: 'Tailored solutions for homes and businesses' },
-    { title: 'Maintenance & Repairs', icon: <Wrench className="w-8 h-8" />, desc: 'Regular maintenance and emergency repair services' }
-  ];
+
 
   const handleSubmit = () => {
     if (!formData.name || !formData.phone || !formData.service || !formData.bill) {
@@ -58,9 +53,6 @@ export default function AdityaSolarServices({setClick, setTermuse}) {
 
   return (
     <div className="min-h-screen min-w-full bg-white">
-
-     {/* Hader */}
-     <Header isMenuOpen={isMenuOpen}/>
 
       {/* Hero Section with Image and Form */}
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-8 md:py-12">
@@ -243,117 +235,8 @@ export default function AdityaSolarServices({setClick, setTermuse}) {
         </div>
       </section>
 
-      {/* Key Services Section */}
-      <section id="services" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Key Services</h2>
-            <p className="text-xl text-gray-600">Comprehensive solar solutions for all your energy needs</p>
-          </div>
+       {/* <Services/> */}
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {keyServices.map((service, i) => (
-              <div key={i} className="bg-gradient-to-br from-white to-blue-50 rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transform hover:scale-105 transition">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
-                <p className="text-sm text-gray-600">{service.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section id="about" className="py-16 bg-gradient-to-br from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Aditya Solar Services?
-              </h2>
-              <div className="space-y-4">
-                {[
-                  'Expert team with years of experience in solar installation',
-                  'High-quality solar panels and equipment',
-                  'Customized solutions for residential and commercial needs',
-                  'Professional maintenance and repair services',
-                  'On-Grid and Off-Grid system expertise',
-                  'Competitive pricing and transparent quotes',
-                  'Post-installation support and warranty'
-                ].map((point, i) => (
-                  <div key={i} className="flex items-start space-x-3">
-                    <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-gray-700">{point}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-orange-500">
-              <div className="space-y-6">
-                <div className="text-center pb-4 border-b">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Contact Information</h3>
-                  <p className="text-gray-600">Get in touch with us today</p>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <Phone className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold text-gray-900">Phone</p>
-                      <div className='flex flex-col'>
-                      <a href="tel:9422809337" className="text-orange-500 hover:underline text-lg font-bold">
-                        9422809337
-                      </a>
-                      <a href="tel:9284287565" className="text-orange-500 hover:underline text-lg font-bold">
-                        9284287565
-                      </a>
-                      </div>
-                    </div>
-
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <Clock className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold text-gray-900">Business Hours</p>
-                      <p className="text-gray-600">Monday - Saturday</p>
-                      <p className="text-gray-600">9:00 AM - 6:00 PM</p>
-                    </div>
-                  </div>
-
-                  <div className="pt-4">
-                    <a 
-                      href="tel:9284287565"
-                      className="block w-full text-center bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold py-3 rounded-lg hover:shadow-lg transition"
-                    >
-                      Call Now for Free Consultation
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-       <SolarSquarePromo/>
-
-       {/* Freqreltly asked questions  */}
-       <ModernSolarFAQ/>
-
-
-       {/* solar time line */}
-       <SolarTimeline/>
-
-
- {/* Footer section */}
-   <Footer/>
-
-      <SolarBuyingGuide/>
-     <OnGridSolarSystem/>
 
       {/* Sticky Mobile Footer */}
       {showStickyFooter && (

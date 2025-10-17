@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link,  } from "react-router-dom";
 
 export default function SolarTimeline() {
   const steps = [
@@ -41,7 +42,7 @@ export default function SolarTimeline() {
   ];
 
   return (
-    <div className="bg-[#0a1f5c] py-12 px-4 md:py-16">
+    <div className=" bg-gradient-to-r from-blue-900 to-blue-800 py-12 px-4 md:py-16 mb-2">
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
@@ -121,12 +122,12 @@ export default function SolarTimeline() {
                   <div className={`w-1/2 ${isLeft ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
                     {/* Button (only for first step) */}
                     {step.hasButton && (
-                      <button
+                      <Link
                         className="mb-6 bg-[#00d4ff] hover:bg-[#00c4ef] text-[#0a1f5c] font-bold text-lg py-4 px-8 rounded-lg transition-colors duration-300 inline-block"
-                        onClick={() => console.log('Schedule consultation')}
+                        to='/'
                       >
                         Schedule a free consultation
-                      </button>
+                      </Link>
                     )}
 
                     {/* Icon */}

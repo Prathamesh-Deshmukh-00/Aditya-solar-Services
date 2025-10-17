@@ -1,84 +1,42 @@
 import React from "react";
-import { Sun, Phone, Mail, Clock } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Send,
+  Sun,
+  Clock,
+  Zap,
+  Menu,
+  X,
+  Home,
+  Info,
+  Briefcase,
+  PhoneCall,
+} from "lucide-react";
 
 function Footer() {
   return (
     //  Footer
-    <footer className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
+    <footer className="bg-[#0a1f5c] text-white mt-auto shadow-[0_-4px_10px_rgba(255,255,255,0.4)]">
+      <div className="max-w-7xl mx-auto px-4 py-8 sm:py-10 lg:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
           {/* Company Info */}
-          <div className="md:col-span-1">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                <Sun className="w-7 h-7 text-orange-500" />
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="bg-gradient-to-br from-orange-500 to-yellow-500 p-2 rounded-lg">
+                <Sun className="w-6 h-6 text-white" />
               </div>
-              <div>
-                <h3 className="text-xl font-bold">Aditya Solar Energy</h3>
-              </div>
+              <h3 className="text-lg font-bold">Aditya Solar</h3>
             </div>
-            <p className="text-blue-200 text-sm mb-6 leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed">
               Professional solar panel installation and maintenance services. We
               don't just sell solar — we give you peace of mind.
             </p>
 
-            {/* Contact Info */}
-            <div className="space-y-3 mb-6">
-<div className="flex items-start space-x-2">
-  <Phone className="w-4 h-4 mt-1 flex-shrink-0 text-white" />
-  <div className="text-sm flex flex-col space-y-1">
-    <p>
-      <a
-        href="tel:9422809337"
-        className="text-white underline cursor-pointer"
-        style={{
-          animation: "highlight 1.5s infinite alternate"
-        }}
-      >
-        9422809337
-      </a>
-    </p>
-    <p>
-      <a
-        href="tel:9284287565"
-        className="text-white underline cursor-pointer"
-        style={{
-          animation: "highlight 1.5s infinite alternate"
-        }}
-      >
-        9284287565
-      </a>
-    </p>
-  </div>
-
-  <style>
-    {`
-      @keyframes highlight {
-        0% { transform: translateY(0) scale(1); }
-        50% { transform: translateY(-6px) scale(1.05); }
-        100% { transform: translateY(0) scale(1); }
-      }
-    `}
-  </style>
-</div>
-
-
-
-
-
-              <div className="flex items-start space-x-2">
-                <Mail className="w-4 h-4 mt-1 flex-shrink-0" />
-                <a
-                  href="mailto: adityasolarservices01@gmail.com"
-                  className="text-sm hover:text-white transition"
-                >
-                  adityasolarservices01@gmail.com
-                </a>
-              </div>
-            </div>
-
             {/* Social Media */}
-            <div className="flex space-x-3">
+            <div className="flex space-x-3 mt-5">
               <a
                 href="https://facebook.com"
                 target="_blank"
@@ -139,66 +97,103 @@ function Footer() {
             </div>
           </div>
 
-          {/* Our Solutions */}
-          <div>
-            <h4 className="font-bold text-lg mb-4">Our Solutions</h4>
-            <ul className="space-y-2 text-blue-200 text-sm">
-              <li className="hover:text-white transition cursor-pointer">
-                Homes
-              </li>
-              <li className="hover:text-white transition cursor-pointer">
-                Commercial
-              </li>
-              <li className="hover:text-white transition cursor-pointer">
-                Housing Society
-              </li>
-            </ul>
-          </div>
-
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-lg mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-blue-200 text-sm">
-              <li className="hover:text-white transition cursor-pointer">
-                About Us
+            <h4 className="font-semibold mb-4 text-base">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  to="/"
+                  className="text-gray-400 hover:text-orange-400 transition"
+                >
+                  Home
+                </Link>
               </li>
-              <li className="hover:text-white transition cursor-pointer">
-                Solar Partner
+              <li>
+                <Link
+                  to="/ContactUs"
+                  className="text-gray-400 hover:text-orange-400 transition"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  ContactUs
+                </Link>
               </li>
-              <li className="hover:text-white transition cursor-pointer">
-                Sitemap
+              <li>
+                <Link
+                  to="/Services"
+                  className="text-gray-400 hover:text-orange-400 transition"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Services
+                </Link>
               </li>
-              <li className="hover:text-white transition cursor-pointer">
-                Careers
-              </li>
-              <li className="hover:text-white transition cursor-pointer">
-                On-Grid Solar
-              </li>
-              <li className="hover:text-white transition cursor-pointer">
-                Off-Grid Solar
+              <li>
+                <Link
+                  to="/BuyingGuide"
+                  className="text-gray-400 hover:text-orange-400 transition"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Buying Guide
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Address */}
+          {/* Services */}
           <div>
-            <h4 className="font-bold text-lg mb-4">Address</h4>
-            <p className="text-blue-200 text-sm leading-relaxed">
-              Telhara, Akola, Maharashtra
-              <br />
-              India 411001
-            </p>
-            <div className="mt-4">
-              <Clock className="w-4 h-4 inline mr-2" />
-              <span className="text-blue-200 text-sm">
-                Mon-Sat: 9 AM - 6 PM
-              </span>
-            </div>
+            <h4 className="font-semibold mb-4 text-base">Our Services</h4>
+            <ul className="space-y-2 text-sm">
+              <li className="text-gray-400">Solar Panel Installation</li>
+              <li className="text-gray-400">Maintenance & Repair</li>
+              <li className="text-gray-400">System Design</li>
+              <li className="text-gray-400">Consultation</li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-semibold mb-4 text-base">Contact Info</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-start gap-2">
+                <Phone className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-400" />
+                <a
+                  href="tel:+919422809337"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  +91 94228 09337
+                </a>
+              </li>
+
+              <li className="flex items-start gap-2">
+                <Mail className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-400" />
+                <a
+                  href="mailto:adityasolarservices01@gmail.com"
+                  className="text-gray-400 hover:text-orange-400 transition-colors break-all"
+                >
+                  adityasolarservices01@gmail.com
+                </a>
+              </li>
+
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-400" />
+                <span className="text-gray-400">
+                  Telhara, Akola, Maharashtra 444108
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="border-t border-blue-700 mt-12 pt-8 text-center text-blue-200 text-sm">
-          <p>© 2025 Aditya Solar Energy. All rights reserved.</p>
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 pt-6 sm:pt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
+            <p className="text-gray-400 text-center sm:text-left">
+              © 2025 Aditya Solar Energy. All rights reserved.
+            </p>
+            <p className="text-gray-500 text-center sm:text-right">
+              Powering a sustainable future
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -19,7 +19,7 @@ import {
 
 
 // Import Components 
-import  {AdityaSolarServices , SolarSquarePromo, Footer} from "./Components/index.js";
+import  {AdityaSolarServices ,Header, SolarSquarePromo, Footer ,SolarBuyingGuide ,ContactUs, Services} from "./Components/index.js";
 
 // import { ProtectedRoute, ProtectedRouteForDealer } from "./ProtectedRoute/ProtectedRoute.jsx";
 
@@ -31,6 +31,7 @@ function App() {
 
   return (
     <Router>
+      <Header/>
       <Routes>
         <Route
           path="/"
@@ -49,6 +50,24 @@ function App() {
           path="/LandingPage"
           element={
               <LandingPage /> 
+          }
+        />
+        <Route
+          path="/BuyingGuide"
+          element={
+              <SolarBuyingGuide /> 
+          }
+        />
+        <Route
+          path="/Services"
+          element={
+              <Services /> 
+          }
+        />
+        <Route
+          path="/ContactUs"
+          element={
+              <ContactUs /> 
           }
         />
 
@@ -195,6 +214,7 @@ function App() {
         {/* Catch-all route */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
