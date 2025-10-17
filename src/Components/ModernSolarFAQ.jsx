@@ -353,7 +353,7 @@ Aditya Solar Energy helps you choose the best model for your needs.`,
         <div className="max-w-5xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-6 md:mb-8">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 border border-white/30">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 border border-black/30">
               <Sun className="w-4 h-4 text-orange-300" />
               <span className=" text-orange-300 font-medium text-md">
                 Solar Energy Solutions

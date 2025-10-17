@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Sun, Zap, DollarSign,Activity, ArrowDownUp, Grid3x3 , Shield, CheckCircle, AlertCircle, ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -29,14 +30,14 @@ export default function SolarBuyingGuide() {
   ];
 
   const advantages = [
-    { icon: <CheckCircle className="w-6 h-6" />, title: "Energy Production Monitoring", desc: "It's easy to keep a track of the units of electricity that your solar system generated" },
-    { icon: <DollarSign className="w-6 h-6" />, title: "Simplified Solar Billing", desc: "It's easier to understand the solar electricity bill" },
-    { icon: <Zap className="w-6 h-6" />, title: "Rapid Payback & Decades of Free Power", desc: "Once the solar on-grid system's price breaks even in 3 to 5 years, you get free solar electricity for the next 20-22 years" },
-    { icon: <DollarSign className="w-6 h-6" />, title: "Significant Monthly Savings", desc: "The monthly electricity bill reduces substantially" },
-    { icon: <Shield className="w-6 h-6" />, title: "No Battery Requirement", desc: "Your grid plays the role of the battery. The system will directly supply excess units to the grid and take them back when needed" },
-    { icon: <DollarSign className="w-6 h-6" />, title: "No Battery Replacement Costs", desc: "Since there's no battery, there are no battery replacement charges involved" },
-    { icon: <CheckCircle className="w-6 h-6" />, title: "Most Affordable Solar Option", desc: "Out of the 3 types of solar systems, the on-grid solar system for homes is the most affordable option" },
-    { icon: <Sun className="w-6 h-6" />, title: "Exclusive Solar Subsidy", desc: "The government offers a subsidy only on an on-grid solar system for residential homes (that use DCR panels)" }
+    { icon: <CheckCircle className="w-5 h-5" />, title: "Energy Production Monitoring", desc: "It's easy to keep a track of the units of electricity that your solar system generated" },
+    { icon: <DollarSign className="w-5 h-5" />, title: "Simplified Solar Billing", desc: "It's easier to understand the solar electricity bill" },
+    { icon: <Zap className="w-5 h-5" />, title: "Rapid Payback & Decades of Free Power", desc: "Once the solar on-grid system's price breaks even in 3 to 5 years, you get free solar electricity for the next 20-22 years" },
+    { icon: <DollarSign className="w-5 h-5" />, title: "Significant Monthly Savings", desc: "The monthly electricity bill reduces substantially" },
+    { icon: <Shield className="w-5 h-5" />, title: "No Battery Requirement", desc: "Your grid plays the role of the battery. The system will directly supply excess units to the grid and take them back when needed" },
+    { icon: <DollarSign className="w-5 h-5" />, title: "No Battery Replacement Costs", desc: "Since there's no battery, there are no battery replacement charges involved" },
+    { icon: <CheckCircle className="w-5 h-5" />, title: "Most Affordable Solar Option", desc: "Out of the 3 types of solar systems, the on-grid solar system for homes is the most affordable option" },
+    { icon: <Sun className="w-5 h-5" />, title: "Exclusive Solar Subsidy", desc: "The government offers a subsidy only on an on-grid solar system for residential homes (that use DCR panels)" }
   ];
 
   const installationSteps = [
@@ -69,19 +70,19 @@ export default function SolarBuyingGuide() {
 
     const components = [
     {
-      icon: <Grid3x3 className="w-5 h-5 md:w-8 md:h-8" />,
+      icon: <Grid3x3 className="w-6 h-6 md:w-8 md:h-8" />,
       title: "Solar Panels",
       description: "Solar panels are the most visible part of the solar system. They're installed on the rooftop, facing the South direction. When sunlight falls on these panels, they absorb that sunlight and convert it into electricity.",
       note: "Solar electricity directly from the panels is DC power. Since homes require alternating current (AC), a solar inverter is needed to convert direct current into AC."
     },
     {
-      icon: <Zap className="w-5 h-5 md:w-8 md:h-8" />,
+      icon: <Zap className="w-6 h-6 md:w-8 md:h-8" />,
       title: "Solar Inverter",
       description: "Without a solar inverter, the entire solar system would have been an impractical model. The solar inverter converts DC into AC.",
       note: "This conversion is essential because that's the only way to convert electricity generated from an on-grid solar system into a usable form (AC) that can run household appliances."
     },
     {
-      icon: <Shield className="w-5 h-5 md:w-8 md:h-8" />,
+      icon: <Shield className="w-6 h-6 md:w-8 md:h-8" />,
       title: "Solar Module Mounting Structures",
       description: "These are the pillars that support solar panels. They must be of a standard grade so that they can withstand heavy winds during storms and cyclones and hold the weight of the solar panels for 25 years (that's the life of a solar system).",
       features: [
@@ -90,7 +91,7 @@ export default function SolarBuyingGuide() {
       ]
     },
     {
-      icon: <Activity className="w-5 h-5 md:w-8 md:h-8" />,
+      icon: <Activity className="w-6 h-6 md:w-8 md:h-8" />,
       title: "Solar Accessories",
       description: "They might not sound that important in the entire setup, but solar accessories are as important as a panel, an inverter, or a mounting structure.",
       accessories: [
@@ -113,7 +114,7 @@ export default function SolarBuyingGuide() {
       ]
     },
     {
-      icon: <ArrowDownUp className="w-5 h-5 md:w-8 md:h-8" />,
+      icon: <ArrowDownUp className="w-6 h-6 md:w-8 md:h-8" />,
       title: "Bi-directional Meter",
       description: "Also known as a net meter, the bi-directional meter is basically designed to keep a track of electricity supplied to the grid and electricity imported from the grid.",
       note: "An on-grid solar system will not become functional until and unless the regular meter is replaced with a bidirectional meter."
@@ -149,12 +150,12 @@ export default function SolarBuyingGuide() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-orange-50">
-       {/* Hero Banner */}
+       {/* Hero Banner - Mobile Optimized */}
   <div className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white overflow-hidden">
-    <div className="relative max-w-7xl mx-auto px-4 py-12 sm:py-16 lg:py-20">
+    <div className="relative max-w-7xl mx-auto px-3 py-8 sm:px-4 sm:py-12 lg:py-20">
       <div className="text-center">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3">On-Grid Solar System Buying Guide</h2>
-        <p className="text-base sm:text-lg lg:text-xl opacity-95 mb-2">
+        <h2 className="text-xl leading-tight sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3">On-Grid Solar System Buying Guide</h2>
+        <p className="text-sm sm:text-lg lg:text-xl opacity-95 mb-2">
           Prices, Subsidy, Advantages and Disadvantages Disclosed
         </p>
       </div>
@@ -174,50 +175,40 @@ export default function SolarBuyingGuide() {
       </svg>
     </div>
   </div>
-      {/* Header */}
-      {/* <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
 
-          <h2 className="text-2xl md:text-3xl font-semibold mb-3">On-Grid Solar System Buying Guide</h2>
-          <p className="text-lg md:text-xl opacity-90">Prices, Subsidy, Advantages and Disadvantages Disclosed</p>
-        </div>
-      </header> */}
-
-      {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-4 py-12">
+      {/* Main Content - Mobile Optimized */}
+      <main className="max-w-6xl mx-auto px-3 py-6 sm:px-4 sm:py-12">
         
-        {/* Overview Section */}
-        <section className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold text-blue-900 mb-4 border-b-4 border-orange-500 pb-2 inline-block">Overview of On-Grid Solar Systems</h2>
-          <p className="text-gray-700 mb-4 leading-relaxed">
+        {/* Overview Section - Mobile Optimized */}
+        <section className="bg-white rounded-lg shadow-lg p-4 mb-6 sm:p-8 sm:mb-8">
+          <h2 className="text-xl sm:text-3xl font-bold text-blue-900 mb-3 sm:mb-4 border-b-4 border-orange-500 pb-2 inline-block">Overview of On-Grid Solar Systems</h2>
+          <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed">
             An on-grid solar system is also known as a grid-tied system since it is connected to the main utility grid. One of the best things about installing on-grid solar at home is the subsidy you get. The Indian government offers homeowners a subsidy for installing a rooftop on-grid solar system ranging between Rs. 30,000 and Rs. 78,000 (depending upon the installed system capacity).
           </p>
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-4">
-            <p className="font-semibold text-blue-900 mb-2">Price Examples:</p>
-            <ul className="list-disc list-inside space-y-1 text-gray-700">
+          <div className="bg-blue-50 border-l-4 border-blue-600 p-3 mb-3 sm:p-4 sm:mb-4">
+            <p className="font-semibold text-blue-900 mb-2 text-sm sm:text-base">Price Examples:</p>
+            <ul className="list-disc list-inside space-y-1 text-gray-700 text-xs sm:text-base">
               <li>3 kW on-grid solar system price in Bhopal with subsidy: ~ Rs. 1,35,000</li>
               <li>5 kW on-grid solar system price in Bengaluru with subsidy: ~ Rs. 3,00,000</li>
             </ul>
           </div>
-          <p className="text-sm text-gray-600 italic">
+          <p className="text-xs sm:text-sm text-gray-600 italic">
             *Please note: The prices above are indicative as of 29th April 2025. The final cost depends on various factors including city, DISCOM charges, product variant, panel type, system capacity, and more.
           </p>
         </section>
 
 
-         {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-3 md:px-4 py-6 md:py-12">
-        {/* Introduction */}
-        <section className="mb-8 md:mb-16">
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4 md:mb-6">What is an On-grid Solar System?</h2>
-          <div className="bg-white rounded-xl shadow-md p-4 md:p-8 border-l-4 border-blue-600">
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-3 md:mb-4">
+         {/* Introduction - Mobile Optimized */}
+        <section className="mb-6 sm:mb-8 md:mb-16">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4 md:mb-6">What is an On-grid Solar System?</h2>
+          <div className="bg-white rounded-xl shadow-md p-4 sm:p-6 md:p-8 border-l-4 border-blue-600">
+            <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-3 md:mb-4">
               An on-grid solar system (grid-tied) connects directly to the utility grid through a bi-directional meter (net meter). Most Indian homes with a reliable grid connection choose on-grid solar since this system is powerful enough to support all household energy requirements.
             </p>
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
               The on-grid solar system is a careful compilation of many components, listed below, arranged together to convert sunlight into electricity:
             </p>
-            <ul className="mt-3 md:mt-4 space-y-2 text-sm md:text-base text-gray-700">
+            <ul className="mt-3 md:mt-4 space-y-1.5 sm:space-y-2 text-xs sm:text-sm md:text-base text-gray-700">
               <li className="flex items-start">
                 <span className="text-blue-600 mr-2">•</span>
                 <span>Solar Panels</span>
@@ -242,48 +233,48 @@ export default function SolarBuyingGuide() {
           </div>
         </section>
 
-        {/* Did You Know Box */}
-        <div className="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-xl shadow-md p-4 md:p-6 mb-8 md:mb-16 border-l-4 border-amber-500">
-          <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3">Did you know?</h3>
-          <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+        {/* Did You Know Box - Mobile Optimized */}
+        <div className="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-xl shadow-md p-4 mb-6 sm:p-6 sm:mb-8 md:mb-16 border-l-4 border-amber-500">
+          <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3">Did you know?</h3>
+          <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">
             When maintained properly, an on-grid solar system can last for 25 years. Contrary to popular belief, cleaning your panels with sprinklers can actually damage them. To keep your system operating at its peak efficiency, be sure to sign up for professional after-sales services.
           </p>
         </div>
 
-        {/* Components Section */}
-        <section className="mb-8 md:mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-8">What Are the On-Grid Solar System Components?</h2>
-          <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8">
+        {/* Components Section - Mobile Optimized */}
+        <section className="mb-6 sm:mb-8 md:mb-16">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-3 sm:mb-4 md:mb-8">What Are the On-Grid Solar System Components?</h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 sm:mb-6 md:mb-8">
             Here's a breakdown of how every single component in an on-grid solar system comes together to power your home.
           </p>
           
-          <div className="space-y-4 md:space-y-8">
+          <div className="space-y-4 sm:space-y-6 md:space-y-8">
             {components.map((component, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-4 md:p-8 hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 hover:shadow-xl transition-shadow">
                 <div className="flex items-start gap-3 md:gap-4">
-                  <div className="bg-blue-100 p-2 md:p-4 rounded-lg text-blue-600 flex-shrink-0">
+                  <div className="bg-blue-100 p-2 sm:p-3 md:p-4 rounded-lg text-blue-600 flex-shrink-0">
                     {component.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg md:text-2xl font-bold text-gray-800 mb-2 md:mb-4">{index + 1}. {component.title}</h3>
-                    <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-3 md:mb-4">{component.description}</p>
+                    <h3 className="text-base sm:text-lg md:text-2xl font-bold text-gray-800 mb-2 md:mb-4">{index + 1}. {component.title}</h3>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed mb-3 md:mb-4">{component.description}</p>
                     
                     {component.note && (
                       <div className="bg-blue-50 border-l-4 border-blue-500 p-3 md:p-4 rounded">
-                        <p className="text-xs md:text-sm font-semibold text-blue-900">Did you know?</p>
-                        <p className="text-xs md:text-base text-gray-700 mt-1">{component.note}</p>
+                        <p className="text-xs sm:text-sm font-semibold text-blue-900">Did you know?</p>
+                        <p className="text-xs sm:text-sm md:text-base text-gray-700 mt-1">{component.note}</p>
                       </div>
                     )}
                     
                     {component.features && (
                       <div className="mt-3 md:mt-4">
-                        <p className="text-sm md:text-base font-semibold text-gray-800 mb-2">The best solar module mounting structures are prefabricated in precision labs. They're coated with hot-dip galvanizing on steel to make them rust-proof.</p>
-                        <p className="text-sm md:text-base text-gray-700 mb-2">For instance, SolarSquare's Intelligent WindPro Mount™ 2.0 mounting structure, which is IIT-Bombay approved, can:</p>
-                        <ul className="space-y-2">
+                        <p className="text-xs sm:text-sm md:text-base font-semibold text-gray-800 mb-2">The best solar module mounting structures are prefabricated in precision labs. They're coated with hot-dip galvanizing on steel to make them rust-proof.</p>
+                        <p className="text-xs sm:text-sm md:text-base text-gray-700 mb-2">For instance, SolarSquare's Intelligent WindPro Mount™ 2.0 mounting structure, which is IIT-Bombay approved, can:</p>
+                        <ul className="space-y-1.5 sm:space-y-2">
                           {component.features.map((feature, idx) => (
                             <li key={idx} className="flex items-start">
-                              <span className="text-green-600 mr-2">✓</span>
-                              <span className="text-xs md:text-base text-gray-700">{feature}</span>
+                              <span className="text-green-600 mr-2 text-sm">✓</span>
+                              <span className="text-xs sm:text-sm md:text-base text-gray-700">{feature}</span>
                             </li>
                           ))}
                         </ul>
@@ -292,14 +283,14 @@ export default function SolarBuyingGuide() {
                     
                     {component.accessories && (
                       <div className="mt-3 md:mt-4 space-y-3 md:space-y-4">
-                        <p className="text-sm md:text-base font-semibold text-gray-800">Let's see how!</p>
+                        <p className="text-xs sm:text-sm md:text-base font-semibold text-gray-800">Let's see how!</p>
                         {component.accessories.map((acc, idx) => (
                           <div key={idx} className="pl-3 md:pl-4 border-l-2 border-gray-200">
-                            <p className="text-sm md:text-base font-semibold text-gray-800">{acc.name}:</p>
-                            <p className="text-xs md:text-base text-gray-700">{acc.desc}</p>
+                            <p className="text-xs sm:text-sm md:text-base font-semibold text-gray-800">{acc.name}:</p>
+                            <p className="text-xs sm:text-sm md:text-base text-gray-700">{acc.desc}</p>
                           </div>
                         ))}
-                        <p className="text-xs md:text-sm text-gray-600 italic mt-3 md:mt-4">
+                        <p className="text-xs sm:text-sm text-gray-600 italic mt-3 md:mt-4">
                           Please note: all the DC cable connections are made using MC4 connectors.
                         </p>
                       </div>
@@ -311,34 +302,34 @@ export default function SolarBuyingGuide() {
           </div>
         </section>
 
-        {/* Net Metering Benefits */}
-        <section className="mb-8 md:mb-16">
-          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow-md p-4 md:p-8 border-l-4 border-green-600">
-            <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">How Net Metering Helps</h3>
-            <p className="text-sm md:text-base text-gray-700 mb-3 md:mb-4">
+        {/* Net Metering Benefits - Mobile Optimized */}
+        <section className="mb-6 sm:mb-8 md:mb-16">
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow-md p-4 sm:p-6 md:p-8 border-l-4 border-green-600">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">How Net Metering Helps</h3>
+            <p className="text-xs sm:text-sm md:text-base text-gray-700 mb-3 md:mb-4">
               The net meter helps the discom track the power generated by the solar system, the power consumed, the power supplied to the grid, and the power imported.
             </p>
-            <p className="text-sm md:text-base text-gray-700 mb-3 md:mb-4">
+            <p className="text-xs sm:text-sm md:text-base text-gray-700 mb-3 md:mb-4">
               At the end of every month, when the electricity bill is generated, the readings from the bidirectional meter give an account of:
             </p>
-            <ul className="space-y-2 mb-4 md:mb-6">
+            <ul className="space-y-1.5 sm:space-y-2 mb-4 md:mb-6">
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">•</span>
-                <span className="text-sm md:text-base text-gray-700">How many units were supplied to the grid</span>
+                <span className="text-xs sm:text-sm md:text-base text-gray-700">How many units were supplied to the grid</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 mr-2">•</span>
-                <span className="text-sm md:text-base text-gray-700">How many units were taken from the grid</span>
+                <span className="text-xs sm:text-sm md:text-base text-gray-700">How many units were taken from the grid</span>
               </li>
             </ul>
             <div className="space-y-3">
               <div className="bg-white rounded-lg p-3 md:p-4">
-                <p className="text-sm md:text-base text-gray-700">
+                <p className="text-xs sm:text-sm md:text-base text-gray-700">
                   <span className="font-semibold text-green-700">If you supply more units to the grid than you consumed:</span> Those units will be deducted from your bill. It will reduce the bill further.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-3 md:p-4">
-                <p className="text-sm md:text-base text-gray-700">
+                <p className="text-xs sm:text-sm md:text-base text-gray-700">
                   <span className="font-semibold text-blue-700">If you use extra units from the grid:</span> Those units would be added to your bill in addition to what your solar plant generated.
                 </p>
               </div>
@@ -346,77 +337,81 @@ export default function SolarBuyingGuide() {
           </div>
         </section>
 
-        {/* How It Works */}
-        <section>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6">How Does an On-grid Solar System Work?</h2>
-          <p className="text-base md:text-lg text-gray-700 mb-4 md:mb-8">
+        {/* How It Works - Mobile Optimized */}
+        <section className="mb-6 sm:mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-3 sm:mb-4 md:mb-6">How Does an On-grid Solar System Work?</h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 sm:mb-6 md:mb-8">
             Now you've seen how multiple on-grid solar system components come together, it makes sense to break down the process of sunlight getting converted into electricity.
           </p>
-          <p className="text-base md:text-lg font-semibold text-gray-800 mb-4 md:mb-8">Here's how an on-grid solar system works:</p>
+          <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-800 mb-4 sm:mb-6 md:mb-8">Here's how an on-grid solar system works:</p>
           
-          <div className="space-y-4 md:space-y-6">
+          <div className="space-y-3 sm:space-y-4 md:space-y-6">
             {workingSteps.map((step, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-md p-4 md:p-6 border-l-4 border-blue-500 hover:shadow-lg transition-shadow">
+              <div key={index} className="bg-white rounded-xl shadow-md p-4 sm:p-5 md:p-6 border-l-4 border-blue-500 hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3 md:gap-4">
-                  <div className="bg-blue-600 text-white w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0 text-sm md:text-base">
+                  <div className="bg-blue-600 text-white w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0 text-xs sm:text-sm md:text-base">
                     {index + 1}
                   </div>
                   <div>
-                    <h3 className="text-base md:text-xl font-bold text-gray-800 mb-2 md:mb-3">{step.title}</h3>
-                    <p className="text-sm md:text-base text-gray-700 leading-relaxed">{step.content}</p>
+                    <h3 className="text-sm sm:text-base md:text-xl font-bold text-gray-800 mb-2 md:mb-3">{step.title}</h3>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">{step.content}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </section>
-      </main>
 
-        {/* Subsidy Section */}
-        <section className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold text-blue-900 mb-4 border-b-4 border-orange-500 pb-2 inline-block">Solar Subsidy For On-Grid System</h2>
-          <p className="text-gray-700 mb-6">The Indian government offers a subsidy when you install an on-grid solar system for home. This subsidy remains the same for all states in India.</p>
+        {/* Subsidy Section - Mobile Optimized */}
+        <section className="bg-white rounded-lg shadow-lg p-4 mb-6 sm:p-8 sm:mb-8">
+          <h2 className="text-xl sm:text-3xl font-bold text-blue-900 mb-3 sm:mb-4 border-b-4 border-orange-500 pb-2 inline-block">Solar Subsidy For On-Grid System</h2>
+          <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6">The Indian government offers a subsidy when you install an on-grid solar system for home. This subsidy remains the same for all states in India.</p>
           
-          <div className="overflow-x-auto mb-6">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-blue-900 text-white">
-                  <th className="border p-3 text-left">Solar System Size</th>
-                  <th className="border p-3 text-left">Solar Subsidy (PM Surya Ghar Muft Bijli Yojana)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="hover:bg-gray-50">
-                  <td className="border p-3">1 kWp</td>
-                  <td className="border p-3 font-semibold text-green-600">Rs. 30,000</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="border p-3">2 kWp</td>
-                  <td className="border p-3 font-semibold text-green-600">Rs. 60,000</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="border p-3">3 kWp and higher</td>
-                  <td className="border p-3 font-semibold text-green-600">Rs. 78,000</td>
-                </tr>
-              </tbody>
-            </table>
+          {/* Mobile-Friendly Table */}
+          <div className="overflow-x-auto mb-6 -mx-4 sm:mx-0">
+            <div className="inline-block min-w-full align-middle">
+              <table className="min-w-full border-collapse">
+                <thead>
+                  <tr className="bg-blue-900 text-white">
+                    <th className="border p-2 sm:p-3 text-left text-xs sm:text-sm md:text-base">Solar System Size</th>
+                    <th className="border p-2 sm:p-3 text-left text-xs sm:text-sm md:text-base">Solar Subsidy (PM Surya Ghar)</th>
+                  </tr>
+                </thead>
+                <tbody className="text-xs sm:text-sm md:text-base">
+                  <tr className="hover:bg-gray-50">
+                    <td className="border p-2 sm:p-3">1 kWp</td>
+                    <td className="border p-2 sm:p-3 font-semibold text-green-600">Rs. 30,000</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="border p-2 sm:p-3">2 kWp</td>
+                    <td className="border p-2 sm:p-3 font-semibold text-green-600">Rs. 60,000</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="border p-2 sm:p-3">3 kWp and higher</td>
+                    <td className="border p-2 sm:p-3 font-semibold text-green-600">Rs. 78,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-
-
         </section>
 
+        
+  <div className="min-h-screen bg-gradient-to-b from-blue-50 to-orange-50 py-4 md:py-8 px-3 md:px-6">
+      <div className="max-w-6xl mx-auto">
+        
         {/* Advantages Section */}
-        <section className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6 border-b-4 border-orange-500 pb-2 inline-block">
+        <section className="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-4 md:mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 md:mb-6 border-b-4 border-orange-500 pb-2 inline-block">
             Advantages of On-Grid Solar System
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
             {advantages.map((advantage, index) => (
-              <div key={index} className="flex items-start space-x-4 p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
-                <div className="text-green-600 flex-shrink-0">{advantage.icon}</div>
+              <div key={index} className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                <div className="text-green-600 flex-shrink-0 mt-0.5">{advantage.icon}</div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-1">{advantage.title}</h3>
-                  <p className="text-gray-700 text-sm">{advantage.desc}</p>
+                  <h3 className="font-bold text-gray-900 mb-1 text-sm md:text-base">{advantage.title}</h3>
+                  <p className="text-gray-700 text-xs md:text-sm leading-relaxed">{advantage.desc}</p>
                 </div>
               </div>
             ))}
@@ -424,21 +419,21 @@ export default function SolarBuyingGuide() {
         </section>
 
         {/* Disadvantages Section */}
-        <section className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6 border-b-4 border-orange-500 pb-2 inline-block">
+        <section className="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-4 md:mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 md:mb-6 border-b-4 border-orange-500 pb-2 inline-block">
             Limitation of On-Grid Solar System
           </h2>
-          <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
-            <div className="flex items-start space-x-4">
-              <AlertCircle className="w-8 h-8 text-red-600 flex-shrink-0" />
+          <div className="bg-red-50 border-l-4 border-red-500 p-4 md:p-6 rounded-lg">
+            <div className="flex items-start space-x-3 md:space-x-4">
+              <AlertCircle className="w-6 h-6 md:w-8 md:h-8 text-red-600 flex-shrink-0 mt-0.5" />
               <div>
-                <h3 className="font-bold text-red-900 text-xl mb-3">Power Outages</h3>
-                <p className="text-gray-700 mb-4">
+                <h3 className="font-bold text-red-900 text-lg md:text-xl mb-2 md:mb-3">Power Outages</h3>
+                <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base leading-relaxed">
                   Although connection with the grid is a sure benefit, it's also a limitation. When there's a power cut from the grid, the on-grid solar system automatically shuts down. This interruption in the supply of power is known as a power outage.
                 </p>
-                <div className="bg-white p-4 rounded-lg">
-                  <p className="font-semibold text-gray-900 mb-2">Anti-Islanding Protection</p>
-                  <p className="text-gray-700 text-sm">
+                <div className="bg-white p-3 md:p-4 rounded-lg">
+                  <p className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Anti-Islanding Protection</p>
+                  <p className="text-gray-700 text-xs md:text-sm leading-relaxed">
                     The main reason an on-grid solar inverter is designed to automatically shut down if the grid fails is to eliminate safety risks. This feature protects electrical maintenance personnel from electric shocks while working on the grid.
                   </p>
                 </div>
@@ -446,44 +441,44 @@ export default function SolarBuyingGuide() {
             </div>
           </div>
 
-          <div className="mt-6 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
-            <h3 className="font-bold text-blue-900 text-xl mb-3">So, which is better: off-grid or on-grid?</h3>
-            <p className="text-gray-700 mb-3">
+          <div className="mt-4 md:mt-6 bg-blue-50 border-l-4 border-blue-600 p-4 md:p-6 rounded-lg">
+            <h3 className="font-bold text-blue-900 text-lg md:text-xl mb-2 md:mb-3">So, which is better: off-grid or on-grid?</h3>
+            <p className="text-gray-700 mb-2 md:mb-3 text-sm md:text-base leading-relaxed">
               Hands down, on-grid solar systems in urban areas with a reliable grid are unbeatable for meeting a home's power requirements.
             </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <ul className="list-disc list-inside space-y-1.5 md:space-y-2 text-gray-700 text-sm md:text-base ml-2">
               <li>No costs related to battery upkeep</li>
               <li>More affordable than an off-grid solar system</li>
               <li>Government offers subsidy on on-grid systems, not off-grid</li>
             </ul>
-            <p className="text-gray-800 font-semibold mt-4">
+            <p className="text-gray-800 font-semibold mt-3 md:mt-4 text-sm md:text-base">
               ✅ If your power grid is reliable, investing in an on-grid solar system is the smarter choice!
             </p>
           </div>
         </section>
 
         {/* Installation Process */}
-        <section className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6 border-b-4 border-orange-500 pb-2 inline-block">
+        <section className="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-4 md:mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 md:mb-6 border-b-4 border-orange-500 pb-2 inline-block">
             How to Install an On-Grid Solar System at Home?
           </h2>
           
-          <div className="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-6 mb-6">
-            <p className="font-bold text-yellow-900 mb-2">⚠️ Important Note:</p>
-            <p className="text-gray-700">
+          <div className="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-4 md:p-6 mb-4 md:mb-6">
+            <p className="font-bold text-yellow-900 mb-2 text-sm md:text-base">⚠️ Important Note:</p>
+            <p className="text-gray-700 text-xs md:text-sm leading-relaxed">
               Installing rooftop solar is NOT a DIY task. You must leave it in the hands of experts because it's critical to identify rooftop capacity, determine shadow-free areas, set optimal tilt angles, and carry out safe installation.
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-3 md:space-y-6">
             {installationSteps.map((step) => (
-              <div key={step.step} className="flex items-start space-x-4 p-5 bg-gray-50 rounded-lg border-l-4 border-orange-500">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center font-bold text-xl">
+              <div key={step.step} className="flex items-start space-x-3 md:space-x-4 p-3 md:p-5 bg-gray-50 rounded-lg border-l-4 border-orange-500">
+                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-blue-900 text-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl">
                   {step.step}
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-bold text-gray-900 text-lg mb-2">{step.title}</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed">{step.desc}</p>
+                <div className="flex-1 pt-0.5">
+                  <h3 className="font-bold text-gray-900 text-base md:text-lg mb-1 md:mb-2">{step.title}</h3>
+                  <p className="text-gray-700 text-xs md:text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -491,56 +486,56 @@ export default function SolarBuyingGuide() {
         </section>
 
         {/* Why Choose Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold mb-2">Why Choose Aditya Solar Energy?</h2>
-          <p className="text-xl mb-6 italic opacity-90">Making your journey from expensive electricity to free solar power easy!</p>
+        <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-lg shadow-lg p-4 md:p-8 mb-4 md:mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-1 md:mb-2">Why Choose Aditya Solar Energy?</h2>
+          <p className="text-base md:text-xl mb-4 md:mb-6 italic opacity-90">Making your journey from expensive electricity to free solar power easy!</p>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-5">
-              <h3 className="font-bold text-yellow-400 mb-2 text-lg">💰 Zero-Investment Solar Scheme</h3>
-              <p className="text-sm">Easy loans and financing options where government subsidy offsets initial down payment. EMI schedules from 3 to 60 months available.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-5">
+              <h3 className="font-bold text-yellow-400 mb-2 text-base md:text-lg">💰 Zero-Investment Solar Scheme</h3>
+              <p className="text-xs md:text-sm leading-relaxed">Easy loans and financing options where government subsidy offsets initial down payment. EMI schedules from 3 to 60 months available.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-5">
-              <h3 className="font-bold text-yellow-400 mb-2 text-lg">⚡ Swift Installation</h3>
-              <p className="text-sm">No middlemen involved. Complete system setup executed by our team in 8 hours.</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-5">
+              <h3 className="font-bold text-yellow-400 mb-2 text-base md:text-lg">⚡ Swift Installation</h3>
+              <p className="text-xs md:text-sm leading-relaxed">No middlemen involved. Complete system setup executed by our team in 8 hours.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-5">
-              <h3 className="font-bold text-yellow-400 mb-2 text-lg">🛠️ Solid After-Sales Support</h3>
-              <p className="text-sm">Minimum 45 maintenance visits over 5 years for deep cleaning and preventive checks.</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-5">
+              <h3 className="font-bold text-yellow-400 mb-2 text-base md:text-lg">🛠️ Solid After-Sales Support</h3>
+              <p className="text-xs md:text-sm leading-relaxed">Minimum 45 maintenance visits over 5 years for deep cleaning and preventive checks.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-5">
-              <h3 className="font-bold text-yellow-400 mb-2 text-lg">🛡️ Leakage-Free Guarantee</h3>
-              <p className="text-sm">HILTI AirTight chemical anchoring protects your roof. Rs. 1 lakh guarantee for 1 year.</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-5">
+              <h3 className="font-bold text-yellow-400 mb-2 text-base md:text-lg">🛡️ Leakage-Free Guarantee</h3>
+              <p className="text-xs md:text-sm leading-relaxed">HILTI AirTight chemical anchoring protects your roof. Rs. 1 lakh guarantee for 1 year.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-5 md:col-span-2">
-              <h3 className="font-bold text-yellow-400 mb-2 text-lg">💵 Money-Back Guarantee</h3>
-              <p className="text-sm">First and only solar company in India to offer money-back guarantee at Rs. 8 per unit if we fall short on promised generation.</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-5 md:col-span-2">
+              <h3 className="font-bold text-yellow-400 mb-2 text-base md:text-lg">💵 Money-Back Guarantee</h3>
+              <p className="text-xs md:text-sm leading-relaxed">First and only solar company in India to offer money-back guarantee at Rs. 8 per unit if we fall short on promised generation.</p>
             </div>
           </div>
         </section>
 
         {/* FAQs Section */}
-        <section className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold text-blue-900 mb-6 border-b-4 border-orange-500 pb-2 inline-block">
+        <section className="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-4 md:mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 md:mb-6 border-b-4 border-orange-500 pb-2 inline-block">
             Frequently Asked Questions
           </h2>
-          <div className="space-y-4">
+          <div className="space-y-2 md:space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="border-2 border-gray-200 rounded-lg overflow-hidden">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between p-5 bg-gray-50 hover:bg-gray-100 transition-colors"
+                  className="w-full flex items-center justify-between p-4 md:p-5 bg-gray-50 hover:bg-gray-100 active:bg-gray-200 transition-colors touch-manipulation"
                 >
-                  <span className="font-semibold text-left text-gray-900">{faq.question}</span>
+                  <span className="font-semibold text-left text-gray-900 text-sm md:text-base pr-3">{faq.question}</span>
                   {openFAQ === index ? (
-                    <ChevronUp className="w-5 h-5 text-blue-900 flex-shrink-0" />
+                    <ChevronUp className="w-5 h-5 md:w-6 md:h-6 text-blue-900 flex-shrink-0" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-blue-900 flex-shrink-0" />
+                    <ChevronDown className="w-5 h-5 md:w-6 md:h-6 text-blue-900 flex-shrink-0" />
                   )}
                 </button>
                 {openFAQ === index && (
-                  <div className="p-5 bg-white border-t-2 border-gray-200">
-                    <p className="text-gray-700">{faq.answer}</p>
+                  <div className="p-4 md:p-5 bg-white border-t-2 border-gray-200 animate-fadeIn">
+                    <p className="text-gray-700 text-xs md:text-sm leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -549,18 +544,36 @@ export default function SolarBuyingGuide() {
         </section>
 
         {/* Conclusion */}
-        <section className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold mb-4">Conclusion</h2>
-          <p className="mb-4 leading-relaxed">
+        <section className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white rounded-lg shadow-lg p-4 md:p-8 mb-4 md:mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">Conclusion</h2>
+          <p className="mb-3 md:mb-4 leading-relaxed text-sm md:text-base">
             Installing an on-grid solar system is a big decision, and it's your right to be critical about it. When you choose the right quality components, a system you install today can last for at least 25 years.
           </p>
-          <p className="mb-4 leading-relaxed">
+          <p className="mb-3 md:mb-4 leading-relaxed text-sm md:text-base">
             The solar panel installation cost in India varies from city to city, and you should trust a company that's highly rated by customers.
           </p>
-          <p className="font-semibold text-lg">
+          <p className="font-semibold text-base md:text-lg">
             ☀️ The Indian government subsidy is available only till they meet the target of solarizing 1 crore homes under PM Surya Ghar Muft Bijli Yojana. Go solar now and get freedom from paying for electricity!
           </p>
         </section>
+      </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.3s ease-out;
+        }
+      `}</style>
+    </div>
 
       </main>
 
