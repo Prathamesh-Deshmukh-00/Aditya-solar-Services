@@ -347,175 +347,177 @@ Aditya Solar Energy helps you choose the best model for your needs.`,
         }));
 
   return (
-    <div className="min-h-screen border-t-1 rounded-md ">
-      {/* Header with Blue Background */}
-      <div className=" pt-8 pb-24 md:pb-32 px-4">
-        <div className="max-w-5xl mx-auto">
-          {/* Hero Section */}
-          <div className="text-center mb-6 md:mb-8">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 border border-black/30">
-              <Sun className="w-4 h-4 text-orange-300" />
-              <span className=" text-orange-300 font-medium text-md">
-                Solar Energy Solutions
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-900 to-blue-800 bg-clip-text text-transparent mb-4 tracking-tight">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-base md:text-lg text-blue-400">
-              Find answers to all your solar energy questions
-            </p>
-          </div>
-
-          {/* Search Bar */}
-          <div className="relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-400 w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search across all categories..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-3.5 bg-white rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-orange-300 transition-all shadow-lg"
-            />
-          </div>
-          {searchTerm && (
-            <div className="mt-3 text-sm text-blue-100 text-center">
-              {searchResults.length} result
-              {searchResults.length !== 1 ? "s" : ""} found
-            </div>
-          )}
+   <div className="min-h-screen border-t-1 rounded-md">
+  {/* Header Section */}
+  <div className="pt-6 pb-20 md:pb-32 px-3 md:px-4">
+    <div className="max-w-5xl mx-auto">
+      {/* Hero Section */}
+      <div className="text-center mb-5 md:mb-8">
+        <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3.5 py-2 rounded-full mb-3 border border-black/30 scale-95 md:scale-100">
+          <Sun className="w-4 h-4 text-orange-300" />
+          <span className="text-orange-300 font-medium text-sm md:text-md">
+            Solar Energy Solutions
+          </span>
         </div>
+        <h1 className="text-3xl md:text-6xl font-bold bg-gradient-to-r from-blue-900 to-blue-800 bg-clip-text text-transparent mb-3 tracking-tight leading-snug">
+          Frequently Asked Questions
+        </h1>
+        <p className="text-sm md:text-lg text-blue-400">
+          Find answers to all your solar energy questions
+        </p>
       </div>
 
-      {/* Main Content */}
-      <div className="relative -mt-16 md:-mt-24 px-4 pb-12">
-        <div className="max-w-5xl mx-auto">
-          {/* Tabs - Fixed on mobile, always visible */}
-          {searchTerm.trim() === "" && (
-            <div className="bg-white rounded-xl shadow-xl p-2 mb-6 grid grid-cols-3 gap-2">
-              {tabs.map((tab) => {
-                const Icon = tab.icon;
-                return (
-                  <button
-                    key={tab.id}
-                    onClick={() => {
-                      setActiveTab(tab.id);
-                      setOpenQuestion(`${tab.id}-0`);
-                    }}
-                    className={`flex flex-col md:flex-row items-center justify-center gap-1.5 md:gap-2 px-2 md:px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      activeTab === tab.id
-                        ? "bg-gradient-to-r from-blue-900 to-blue-800 text-white shadow-lg"
-                        : "text-gray-600 hover:bg-gray-50"
-                    }`}
-                  >
-                    <Icon className="w-5 h-5 md:w-5 md:h-5 flex-shrink-0" />
-                    <span className="text-xs md:text-base leading-tight text-center md:text-left">
-                      {tab.shortLabel}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          )}
+      {/* Search Bar */}
+      <div className="relative mt-4">
+        <Search className="absolute left-3.5 top-1/2 transform -translate-y-1/2 text-blue-400 w-5 h-5" />
+        <input
+          type="text"
+          placeholder="Search FAQs..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-full pl-11 pr-4 py-3.5 bg-white rounded-2xl text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-orange-300 transition-all shadow-lg text-base"
+        />
+      </div>
 
-          {/* FAQ Cards */}
-          <div className="space-y-3">
-            {displayData.length > 0 ? (
-              displayData.map((faq) => (
+      {searchTerm && (
+        <div className="mt-2 text-sm text-blue-100 text-center">
+          {searchResults.length} result
+          {searchResults.length !== 1 ? "s" : ""} found
+        </div>
+      )}
+    </div>
+  </div>
+
+  {/* Main Content */}
+  <div className="relative -mt-14 md:-mt-24 px-2 md:px-4 pb-10 md:pb-12">
+    <div className="max-w-5xl mx-auto">
+      {/* Mobile Tabs */}
+      {searchTerm.trim() === "" && (
+        <div className="bg-white rounded-2xl shadow-lg p-2 mb-5 grid grid-cols-3 gap-2 sticky top-2 z-30 md:static">
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => {
+                  setActiveTab(tab.id);
+                  setOpenQuestion(`${tab.id}-0`);
+                }}
+                className={`flex flex-col items-center justify-center gap-1.5 px-2 py-2.5 rounded-xl font-semibold text-[13px] md:text-base transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? "bg-gradient-to-r from-blue-900 to-blue-800 text-white shadow-lg scale-105"
+                    : "text-gray-700 hover:bg-gray-100"
+                }`}
+              >
+                <Icon className="w-5 h-5 md:w-5 md:h-5" />
+                <span className="text-[11px] md:text-base">
+                  {tab.shortLabel}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      {/* FAQ Cards */}
+      <div className="space-y-3">
+        {displayData.length > 0 ? (
+          displayData.map((faq) => (
+            <div
+              key={faq.id}
+              className={`bg-white rounded-2xl overflow-hidden transition-all duration-300 ${
+                openQuestion === faq.id
+                  ? "shadow-xl border border-blue-500 scale-[1.01]"
+                  : "shadow-md border border-gray-100 hover:border-blue-200"
+              }`}
+            >
+              <button
+                onClick={() => toggleQuestion(faq.category, faq.index)}
+                className="w-full p-4 text-left flex items-start gap-3 active:scale-[0.98] transition-all"
+              >
                 <div
-                  key={faq.id}
-                  className={`bg-white rounded-xl overflow-hidden transition-all duration-300 ${
+                  className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 ${
                     openQuestion === faq.id
-                      ? "shadow-xl border-2 border-blue-500"
-                      : "shadow-md border-2 border-gray-100 hover:border-blue-200"
+                      ? "bg-gradient-to-br from-orange-500 to-orange-600 shadow-md"
+                      : "bg-blue-100"
                   }`}
                 >
-                  <button
-                    onClick={() => toggleQuestion(faq.category, faq.index)}
-                    className="w-full p-4 md:p-5 text-left flex items-start gap-3 md:gap-4"
-                  >
-                    <div
-                      className={`flex-shrink-0 w-8 h-8 md:w-9 md:h-9 rounded-lg flex items-center justify-center transition-all duration-300 ${
-                        openQuestion === faq.id
-                          ? "bg-gradient-to-br from-orange-500 to-orange-600 shadow-md"
-                          : "bg-blue-100"
-                      }`}
-                    >
-                      <ChevronDown
-                        className={`w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 ${
-                          openQuestion === faq.id
-                            ? "rotate-180 text-white"
-                            : "text-blue-600"
-                        }`}
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      {searchTerm.trim() !== "" && (
-                        <span className="inline-block px-2.5 py-0.5 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full mb-2 capitalize">
-                          {faq.category}
-                        </span>
-                      )}
-                      <h3 className="text-base md:text-lg font-bold text-gray-800 leading-snug">
-                        {highlightText(faq.question, searchTerm)}
-                      </h3>
-                    </div>
-                  </button>
-
-                  <div
-                    className={`transition-all duration-500 ${
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-300 ${
                       openQuestion === faq.id
-                        ? "opacity-100"
-                        : "max-h-0 opacity-0 overflow-hidden"
+                        ? "rotate-180 text-white"
+                        : "text-blue-600"
                     }`}
-                  >
-                    <div className="px-4 md:px-5 pb-4 md:pb-5 pl-12 md:pl-14">
-                      <div className="bg-gradient-to-br from-blue-50 to-orange-50 rounded-lg p-4 border border-blue-100">
-                        <p className="text-sm md:text-base text-gray-700 leading-relaxed whitespace-pre-line">
-                          {highlightText(faq.answer, searchTerm)}
-                        </p>
-                      </div>
-                    </div>
+                  />
+                </div>
+                <div className="flex-1 min-w-0">
+                  {searchTerm.trim() !== "" && (
+                    <span className="inline-block px-2 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-semibold rounded-full mb-2 capitalize">
+                      {faq.category}
+                    </span>
+                  )}
+                  <h3 className="text-sm md:text-lg font-semibold text-gray-800 leading-snug">
+                    {highlightText(faq.question, searchTerm)}
+                  </h3>
+                </div>
+              </button>
+
+              <div
+                className={`transition-all duration-500 ease-in-out ${
+                  openQuestion === faq.id
+                    ? "opacity-100 max-h-[500px]"
+                    : "max-h-0 opacity-0 overflow-hidden"
+                }`}
+              >
+                <div className="px-4 pb-4 pl-12">
+                  <div className="bg-gradient-to-br from-blue-50 to-orange-50 rounded-xl p-3 border border-blue-100">
+                    <p className="text-[13px] text-gray-700 leading-relaxed whitespace-pre-line">
+                      {highlightText(faq.answer, searchTerm)}
+                    </p>
                   </div>
                 </div>
-              ))
-            ) : (
-              <div className="text-center py-12 bg-white rounded-xl shadow-md border-2 border-gray-100">
-                <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Search className="w-7 h-7 text-blue-500" />
-                </div>
-                <p className="text-gray-700 text-base font-semibold">
-                  No questions found
-                </p>
-                <p className="text-gray-500 text-sm mt-1">
-                  Try different keywords
-                </p>
-              </div>
-            )}
-          </div>
-
-          {/* Footer CTA */}
-          <div className="mt-8 md:mt-12">
-            <div className="bg-gradient-to-r from-blue-900 to-blue-800 rounded-xl p-5 md:p-6 text-center shadow-xl">
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-                <div className="text-white">
-                  <p className="font-bold text-base md:text-lg mb-1">
-                    Still have questions?
-                  </p>
-                  <p className="text-sm text-blue-100">
-                    Our solar experts are ready to assist you
-                  </p>
-                </div>
-                <a
-                  href="tel:9422809337"
-                  className="bg-white text-blue-700 px-6 py-3 rounded-lg font-bold hover:shadow-lg hover:scale-105 transition-all whitespace-nowrap"
-                >
-                  Contact Us
-                </a>
               </div>
             </div>
+          ))
+        ) : (
+          <div className="text-center py-10 bg-white rounded-2xl shadow-md border border-gray-100">
+            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <Search className="w-6 h-6 text-blue-500" />
+            </div>
+            <p className="text-gray-700 text-sm font-semibold">
+              No questions found
+            </p>
+            <p className="text-gray-500 text-xs mt-1">
+              Try different keywords
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* Footer CTA */}
+      <div className="mt-8 md:mt-12">
+        <div className="bg-gradient-to-r from-blue-900 to-blue-800 rounded-2xl p-5 text-center shadow-xl">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3">
+            <div className="text-white">
+              <p className="font-bold text-base mb-0.5">
+                Still have questions?
+              </p>
+              <p className="text-sm text-blue-100">
+                Our solar experts are ready to assist you
+              </p>
+            </div>
+            <a
+              href="tel:9422809337"
+              className="bg-white text-blue-700 px-6 py-2.5 rounded-lg font-bold text-sm hover:shadow-lg hover:scale-105 transition-all"
+            >
+              Contact Us
+            </a>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
   );
 }

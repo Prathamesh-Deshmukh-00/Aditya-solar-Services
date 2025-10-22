@@ -49,12 +49,12 @@ export default function ContactUs() {
           }}></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 py-12 sm:py-16 lg:py-20">
+        <div className="relative max-w-7xl mx-auto px-4 py-10 sm:py-12 lg:py-20">
           <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3">Get In Touch</h2>
-            <p className="text-base sm:text-lg lg:text-xl opacity-95 mb-2">We're here to help with all your solar energy needs</p>
-            <div className="flex items-center justify-center gap-2 text-sm">
-              <Zap className="w-4 h-4" />
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3">Get In Touch</h2>
+            <p className="text-sm sm:text-base lg:text-xl opacity-95 mb-2 px-2">We're here to help with all your solar energy needs</p>
+            <div className="flex items-center justify-center gap-2 text-xs sm:text-sm">
+              <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
               <span>Reliable • Efficient • Sustainable</span>
             </div>
           </div>
@@ -275,79 +275,7 @@ export default function ContactUs() {
              {/* Freqreltly asked questions  */}
              <ModernSolarFAQ/>
 
-      {/* Footer */}
-      {/* <footer className="bg-[#0a1f5c] text-white mt-auto">
-        <div className="max-w-7xl mx-auto px-4 py-8 sm:py-10 lg:py-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8"> */}
-            {/* Company Info */}
-            {/* <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="bg-gradient-to-br from-orange-500 to-yellow-500 p-2 rounded-lg">
-                  <Sun className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-bold">Aditya Solar</h3>
-              </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                  Professional solar panel installation and maintenance services. We
-              don't just sell solar — we give you peace of mind.
-              </p>
-            </div> */}
 
-            {/* Quick Links */}
-            {/* <div>
-              <h4 className="font-semibold mb-4 text-base">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-gray-400 hover:text-orange-400 transition">Home</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-orange-400 transition">About Us</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-orange-400 transition">Services</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-orange-400 transition">Contact</a></li>
-              </ul>
-            </div> */}
-
-            {/* Services */}
-            {/* <div>
-              <h4 className="font-semibold mb-4 text-base">Our Services</h4>
-              <ul className="space-y-2 text-sm">
-                <li className="text-gray-400">Solar Panel Installation</li>
-                <li className="text-gray-400">Maintenance & Repair</li>
-                <li className="text-gray-400">System Design</li>
-                <li className="text-gray-400">Consultation</li>
-              </ul>
-            </div> */}
-
-            {/* Contact */}
-            {/* <div>
-              <h4 className="font-semibold mb-4 text-base">Contact Info</h4>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-start gap-2">
-                  <Phone className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-400" />
-                  <span className="text-gray-400">+91 94228 09337</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Mail className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-400" />
-                  <span className="text-gray-400 break-all">adityasolarservices01@gmail.com</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-400" />
-                  <span className="text-gray-400">Telhara, Akola, Maharashtra 444108</span>
-                </li>
-              </ul>
-            </div>
-          </div> */}
-
-          {/* Bottom Bar */}
-          {/* <div className="border-t border-gray-800 pt-6 sm:pt-8">
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
-              <p className="text-gray-400 text-center sm:text-left">
-                © 2025 Aditya Solar Energy. All rights reserved.
-              </p>
-              <p className="text-gray-500 text-center sm:text-right">
-                Powering a sustainable future
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer> */}
     </div>
   );
 }

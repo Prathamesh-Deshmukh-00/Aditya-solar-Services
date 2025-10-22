@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link,  } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function SolarTimeline() {
   const steps = [
@@ -42,14 +42,14 @@ export default function SolarTimeline() {
   ];
 
   return (
-    <div className=" bg-gradient-to-r from-blue-900 to-blue-800 py-12 px-4 md:py-16 mb-2">
+    <div className="bg-gradient-to-r from-blue-900 to-blue-800 py-10 px-3 sm:py-12 sm:px-4 md:py-16 mb-2">
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-white text-2xl md:text-4xl font-bold mb-3 md:mb-4">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <h2 className="text-white text-xl sm:text-2xl md:text-4xl font-bold mb-2 sm:mb-3 md:mb-4 leading-tight px-2">
             The solar switch made simple
           </h2>
-          <p className="text-white text-sm md:text-base opacity-90 max-w-xl mx-auto">
+          <p className="text-white text-sm sm:text-base opacity-90 max-w-xl mx-auto px-2 leading-relaxed">
             Switching to solar can seem daunting, but we've got you covered. Here's how it works
           </p>
         </div>
@@ -57,46 +57,43 @@ export default function SolarTimeline() {
         {/* Timeline - Mobile View */}
         <div className="md:hidden relative max-w-md mx-auto">
           {/* Vertical line */}
-          <div className="absolute left-[26px] top-0 bottom-0 w-[2px] bg-white/20"></div>
+          <div className="absolute left-[22px] sm:left-[26px] top-0 bottom-0 w-[2px] bg-white/20"></div>
 
           {steps.map((step, index) => (
-            <div key={index} className="relative pb-12 last:pb-0">
+            <div key={index} className="relative pb-10 sm:pb-12 last:pb-0">
               {/* Timeline dot */}
-              <div className="absolute left-[15px] top-0 w-6 h-6 rounded-full bg-[#00d4ff] border-4 border-[#0a1f5c] z-10"></div>
+              <div className="absolute left-[13px] sm:left-[15px] top-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#00d4ff] border-[3px] sm:border-4 border-[#0a1f5c] z-10"></div>
 
-{/* Content */}
-              <div className="ml-16">
+              {/* Content */}
+              <div className="ml-12 sm:ml-16">
                 {/* Icon */}
-                <div className="mb-4">
+                <div className="mb-3 sm:mb-4">
                   <img
                     src={step.icon}
                     alt={step.title}
-                    className="w-16 h-16"
+                    className="w-14 h-14 sm:w-16 sm:h-16"
                     loading="lazy"
                   />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-white text-xl font-bold mb-3 leading-tight">
+                <h3 className="text-white text-base sm:text-lg md:text-xl font-bold mb-2 sm:mb-3 leading-tight">
                   {step.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-white text-sm opacity-90 leading-relaxed">
+                <p className="text-white text-xs sm:text-sm opacity-90 leading-relaxed">
                   {step.description}
                 </p>
 
                 {/* Button (only for first step) */}
                 {step.hasButton && (
-                  <button
-                    className="w-full mt-6 bg-[#00d4ff] hover:bg-[#00c4ef] text-[#0a1f5c] font-bold text-base py-3 px-6 rounded-lg transition-colors duration-300"
-                    onClick={() => console.log('Schedule consultation')}
-                    
+                  <a
+                    href="#hero-form"
+                    className="block w-full mt-5 sm:mt-6 bg-[#00d4ff] hover:bg-[#00c4ef] active:bg-[#00b4df] text-[#0a1f5c] font-bold text-sm sm:text-base py-3 sm:py-3.5 px-5 sm:px-6 rounded-lg transition-colors duration-300 text-center"
                   >
-                    <a  href="#hero-form">
                     Schedule a free consultation
-                    </a>
-                  </button>
+                  </a>
                 )}
               </div>
             </div>
