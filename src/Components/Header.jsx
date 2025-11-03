@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useNavigate, useLocation } from "react-router-dom"; // ✅ added useLocation
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Phone, Menu, X, Home, Briefcase, PhoneCall, Book, Sun } from 'lucide-react';
+import { useTranslation } from "react-i18next";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation(); // ✅ get current path
+  const location = useLocation();
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +17,13 @@ function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("lang", lang);
+  };
+
+  const currentLang = i18n.language || localStorage.getItem("lang") || "en";
 
   const navItems = [
     { to: "/LandingPage", label: "Home", icon: Home },
@@ -55,14 +64,14 @@ function Header() {
           <nav className="hidden lg:flex items-center space-x-1">
             {navItems.map((item) => {
               const Icon = item.icon;
-              const isActive = location.pathname === item.to; // ✅ check active page
+              const isActive = location.pathname === item.to;
               return (
                 <Link
                   key={item.to}
                   to={item.to}
                   onClick={() => window.scrollTo(0, 0)}
                   className={`group flex items-center space-x-2 px-4 py-2 rounded-lg relative overflow-hidden transition-all duration-300 
-                    ${isActive ? 'bg-white/20 text-orange-400' : 'hover:bg-white/10'}`} // ✅ highlight current page
+                    ${isActive ? 'bg-white/20 text-orange-400' : 'hover:bg-white/10'}`}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-400/0 via-orange-400/10 to-orange-400/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                   <Icon className={`w-4 h-4 transition-colors duration-300 ${isActive ? 'text-orange-400' : 'text-blue-200 group-hover:text-orange-400'}`} />
@@ -74,8 +83,33 @@ function Header() {
             })}
           </nav>
 
-          {/* CTA Button & Mobile Menu */}
+          {/* CTA Button + Language Buttons + Mobile Menu */}
           <div className="flex items-center space-x-3">
+            {/* ✅ Highlighted Language Buttons */}
+            <div className="hidden md:flex items-center space-x-2 mr-3">
+              <button
+                onClick={() => changeLanguage("en")}
+                className={`px-3 py-1 rounded-lg text-sm transition-all duration-300 ${
+                  currentLang === "en"
+                    ? "bg-orange-500 text-white shadow-md scale-105"
+                    : "bg-white/10 hover:bg-white/20"
+                }`}
+              >
+                English
+              </button>
+              <button
+                onClick={() => changeLanguage("mr")}
+                className={`px-3 py-1 rounded-lg text-sm transition-all duration-300 ${
+                  currentLang === "mr"
+                    ? "bg-orange-500 text-white shadow-md scale-105"
+                    : "bg-white/10 hover:bg-white/20"
+                }`}
+              >
+                मराठी
+              </button>
+            </div>
+
+            {/* Call button */}
             <a 
               href="tel:9284287565" 
               className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-orange-600 px-5 py-2.5 rounded-full text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
@@ -84,6 +118,7 @@ function Header() {
               <span>9284287565</span>
             </a>
             
+            {/* Mobile Menu Toggle */}
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)} 
               className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-all duration-300 active:scale-95"
@@ -108,7 +143,7 @@ function Header() {
           <nav className="flex flex-col px-4 py-3 space-y-1">
             {navItems.map((item) => {
               const Icon = item.icon;
-              const isActive = location.pathname === item.to; // ✅ highlight in mobile too
+              const isActive = location.pathname === item.to;
               return (
                 <Link
                   key={item.to}
@@ -124,7 +159,31 @@ function Header() {
                 </Link>
               );
             })}
-            
+
+            {/* ✅ Mobile Language Buttons with highlight */}
+            <div className="flex justify-center space-x-3 mt-3">
+              <button
+                onClick={() => { changeLanguage("en"); setIsMenuOpen(false); }}
+                className={`px-4 py-2 rounded-lg text-sm transition-all duration-300 ${
+                  currentLang === "en"
+                    ? "bg-orange-500 text-white shadow-md scale-105"
+                    : "bg-white/10 hover:bg-white/20"
+                }`}
+              >
+                English
+              </button>
+              <button
+                onClick={() => { changeLanguage("mr"); setIsMenuOpen(false); }}
+                className={`px-4 py-2 rounded-lg text-sm transition-all duration-300 ${
+                  currentLang === "mr"
+                    ? "bg-orange-500 text-white shadow-md scale-105"
+                    : "bg-white/10 hover:bg-white/20"
+                }`}
+              >
+                मराठी
+              </button>
+            </div>
+
             <a 
               href="tel:9284287565" 
               className="flex items-center justify-center space-x-2 bg-gradient-to-r from-orange-500 to-orange-600 px-5 py-3 rounded-full text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg mt-3 transform hover:scale-105"
