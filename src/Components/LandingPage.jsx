@@ -85,7 +85,7 @@ export default function AdityaSolarServices({ setClick, setTermuse }) {
                     <Clock className="w-6 h-6 text-orange-400" />
                     <div>
                       <p className="text-xs text-blue-200 font-medium">{t('adityaSolarServices.contactCards.businessHours')}</p>
-                      <p className="text-sm font-bold text-white">{t('adityaSolarServices.contactCards.hours')}</p>
+                      <p className="text-sm font-bold w-xl text-white">{t('adityaSolarServices.contactCards.hours')}</p>
                     </div>
                   </div>
                 </div>
@@ -204,7 +204,7 @@ export default function AdityaSolarServices({ setClick, setTermuse }) {
           <div className="flex items-center justify-center mt-6 sm:mt-8 space-x-3 sm:space-x-4 flex-wrap">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
+                <Star key={i} className="w-5 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
               ))}
             </div>
             <span className="text-white font-medium text-xs sm:text-sm">
