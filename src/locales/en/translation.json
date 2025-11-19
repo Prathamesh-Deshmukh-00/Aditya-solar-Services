@@ -399,7 +399,319 @@
       }
     ]
   }
+},
+"SolarBuyingguid2" : {
+  "Content" : {
+"faqs": [
+    {
+      "question": "Does on-grid solar need a battery?",
+      "answer": "No. That's the beauty of installing an on-grid solar system. It does not require a battery connection like off-grid and hybrid solar systems, which makes it easier to maintain and the most affordable option of the three types."
+    },
+    {
+      "question": "Do solar panels work at night?",
+      "answer": "No. Solar panels generate electricity when photons from sunlight knock electrons loose in the PV cells. At night, an on-grid solar system draws power from the grid to keep a house running."
+    },
+    {
+      "question": "What is the difference between on-grid and hybrid solar systems?",
+      "answer": "The main difference is that a hybrid system is connected to the grid and batteries, while an on-grid solar system is connected only to the grid."
+    },
+    {
+      "question": "What is the on-grid solar panel price in India?",
+      "answer": "The prices vary based on the type of solar panels. For instance, the latest technology, MonoPERC half-cut solar panels in India, cost Rs. 24 per watt."
+    }
+  ],
+  "advantages": {
+    "adv1": {
+      "title": "Energy Production Monitoring",
+      "desc": "It's easy to keep a track of the units of electricity that your solar system generated",
+      "icon": "adv1"
+    },
+    "adv2": {
+      "title": "Simplified Solar Billing",
+      "desc": "It's easier to understand the solar electricity bill",
+      "icon": "adv2"
+    },
+    "adv3": {
+      "title": "Rapid Payback & Decades of Free Power",
+      "desc": "Once the solar on-grid system's price breaks even in 3 to 5 years, you get free solar electricity for the next 20-22 years",
+      "icon": "adv3"
+    },
+    "adv4": {
+      "title": "Significant Monthly Savings",
+      "desc": "The monthly electricity bill reduces substantially",
+      "icon": "adv4"
+    },
+    "adv5": {
+      "title": "No Battery Requirement",
+      "desc": "Your grid plays the role of the battery. The system will directly supply excess units to the grid and take them back when needed",
+      "icon": "adv5"
+    },
+    "adv6": {
+      "title": "No Battery Replacement Costs",
+      "desc": "Since there's no battery, there are no battery replacement charges involved",
+      "icon": "adv6"
+    },
+    "adv7": {
+      "title": "Most Affordable Solar Option",
+      "desc": "Out of the 3 types of solar systems, the on-grid solar system for homes is the most affordable option",
+      "icon": "adv7"
+    },
+    "adv8": {
+      "title": "Exclusive Solar Subsidy",
+      "desc": "The government offers a subsidy only on an on-grid solar system for residential homes (that use DCR panels)",
+      "icon": "adv8"
+    }
+  },
+  "installationSteps": {
+    "step1": {
+      "step": 1,
+      "title": "Rooftop Inspection and Site Assessment",
+      "desc": "A trained engineer surveys your rooftop to map shadow-casting objects and determine the optimal panel orientation (usually south in India) and tilt angle (approximately equal to your latitude). This analysis maximizes sunlight exposure and long-term energy yield."
+    },
+    "step2": {
+      "step": 2,
+      "title": "Roof Mounting and Panel Clamping",
+      "desc": "Mounting structures are securely fixed to your roof using corrosion-protected rails and fasteners. Panels are then clamped onto these rails, following the manufacturer's torque specifications to prevent damage."
+    },
+    "step3": {
+      "step": 3,
+      "title": "Inverter Installation & Electrical Wiring",
+      "desc": "Solar strings (series-connected panels) are routed to the DC combiner box, then to the inverter, which converts DC into grid-compatible AC. AC output is channeled through an AC combiner box to your bi-directional meter, with all cables protected in conduit or trays."
+    },
+    "step4": {
+      "step": 4,
+      "title": "Earthing & Lightning Protection",
+      "desc": "Dedicated earthing rods and cables bond both DC and AC components to the ground, safeguarding against electrical faults. A lightning arrester mounted above the panels intercepts strikes and diverts surge energy safely to the earthing grid."
+    },
+    "step5": {
+      "step": 5,
+      "title": "System Commissioning & Monitoring Setup",
+      "desc": "Technicians verify string voltages, phase sequence, and inverter settings before energizing the system. Finally, the inverter is linked to your Wi-Fi for real-time performance monitoring, ensuring any issues are spotted and resolved promptly."
+    }
+  },
+  
+  "components": {
+    "comp1": {
+      "icon": "comp1",
+      "title": "Solar Panels",
+      "description": "Solar panels are the most visible part of the solar system. They're installed on the rooftop, facing the South direction. When sunlight falls on these panels, they absorb that sunlight and convert it into electricity.",
+      "note": "Solar electricity directly from the panels is DC power. Since homes require alternating current (AC), a solar inverter is needed to convert direct current into AC."
+    },
+
+    "comp2": {
+      "icon": "comp2",
+      "title": "Solar Inverter",
+      "description": "Without a solar inverter, the entire solar system would have been an impractical model. The solar inverter converts DC into AC.",
+      "note": "This conversion is essential because that's the only way to convert electricity generated from an on-grid solar system into a usable form (AC) that can run household appliances."
+    },
+
+    "comp3": {
+      "icon": "comp3",
+      "title": "Solar Module Mounting Structures",
+      "description": "These are the pillars that support solar panels. They must be of a standard grade so that they can withstand heavy winds during storms and cyclones and hold the weight of the solar panels for 25 years (that's the life of a solar system).",
+      "features": [
+        "Withstand wind speeds as high as 170 kmph",
+        "Prevent rusting for years because they have a high-density galvanized iron (HDGI) coating of 80 microns to withstand corrosion."
+      ]
+    },
+
+    "comp4": {
+      "icon": "comp4",
+      "title": "Solar Accessories",
+      "description": "They might not sound that important in the entire setup, but solar accessories are as important as a panel, an inverter, or a mounting structure.",
+      "accessories": [
+        {
+          "name": "AC and DC cables",
+          "desc": "They are required for wiring solar panels and connecting different parts to make the entire solar grid functional."
+        },
+        {
+          "name": "DC combiner boxes",
+          "desc": "A DC combiner box works like an isolation box. All the cables carrying DC current from the panels are isolated in this box. DC power coming from the panels can be as high as 1,000 volts, even more. It's dangerous (potentially lethal); hence, a DC combiner box is required. This box feeds the DC current into the solar inverter and the solar inverter produces alternating current."
+        },
+        {
+          "name": "AC combiner boxes",
+          "desc": "The AC power from the solar inverter is fed into an AC combiner box (all cables carrying the AC current from multiple inverters are combined in this box)."
+        },
+        {
+          "name": "Earthing strips and wires",
+          "desc": "Once the entire on-grid solar system is set up, earthing is done using earthing strips and wires."
+        }
+      ]
+    },
+
+    "comp5": {
+      "icon": "comp5",
+      "title": "Bi-directional Meter",
+      "description": "Also known as a net meter, the bi-directional meter is basically designed to keep a track of electricity supplied to the grid and electricity imported from the grid.",
+      "note": "An on-grid solar system will not become functional until and unless the regular meter is replaced with a bidirectional meter."
+    }
+  },
+  "workingSteps": {
+    "step1": {
+      "title": "Solar Energy Capture and DC Power Generation",
+      "content": "Solar panels, composed of photovoltaic (PV) cells, absorb photons from sunlight and free electrons within the cell's semiconductor material. This movement of electrons generates a direct current (DC). The total DC output depends on factors such as panel efficiency, sunlight intensity, and shading. Needless to say, higher irradiance yields more current."
+    },
+    "step2": {
+      "title": "DC-to-AC Conversion via the Solar Inverter",
+      "content": "The inverter is the heart of your solar system. It takes the panel-generated DC and inverts it into alternating current (AC), matching the frequency (50 Hz in India) and voltage of the local grid. Modern inverters also perform maximum power point tracking (MPPT) to continually adjust voltage/current inputs, extracting the highest possible power from your panels."
+    },
+    "step3": {
+      "title": "Bidirectional Meter Integration",
+      "content": "Once converted to grid-compliant AC, the electricity flows through a bi-directional (net) meter. This meter precisely records both incoming units drawn from the grid and outgoing units exported from your solar system, ensuring you're billed only for the net energy you consume."
+    },
+    "step4": {
+      "title": "Household Consumption of Solar-Generated AC",
+      "content": "During the day, your home's appliances, such as lights, fans, fridges, air conditioners, and electronics, draw AC power directly from the inverter output. Because solar power is typically the first source used, it reduces or altogether replaces the need to import electricity from the grid."
+    },
+    "step5": {
+      "title": "Exporting Excess Solar Power",
+      "content": "If your panels produce more electricity than your household consumes at any moment, the surplus AC automatically travels back through the bi-directional meter into the grid. Your meter records these exported units, which may earn you financial credit or feed-in benefits under your local net-metering policy."
+    },
+    "step6": {
+      "title": "Importing Grid Power When Needed",
+      "content": "After sunset or during low-sunlight periods when it's cloudy, the bi-directional meter switches to import mode if your solar output drops below your home's demand. It draws the shortfall from the grid, using up any previously accrued credits first, so your appliances continue running seamlessly without interruption."
+    }
+  }
 }
+  },
+"SolarBuyingguid": {
+    "hero": {
+      "title": "On-Grid Solar System Buying Guide",
+      "subtitle": "Prices, Subsidy, Advantages and Disadvantages Disclosed"
+    },
+    "overview": {
+      "heading": "Overview of On-Grid Solar Systems",
+      "para1": "An on-grid solar system, also known as a grid-tied system, is directly connected to the main electricity grid. In Maharashtra, homeowners installing a rooftop on-grid solar system can avail government subsidies under the PM-Surya Ghar Muft Bijli Yojana. Subsidy amounts generally range between Rs. 30,000 and Rs. 78,000 depending on the system capacity and eligibility criteria.",
+      "priceExamplesTitle": "Price Examples:",
+      "priceExample1": "3 kW on-grid solar system price in Maharashtra with subsidy: ~ Rs. 1,12,000 – Rs. 1,20,000",
+      "priceExample2": "5 kW on-grid solar system price in Maharashtra with subsidy: ~ Rs. 2,07,000 – Rs. 2,20,000",
+      "note": "*Please note: These prices are approximate for Maharashtra as of 16th November 2025. Final cost may vary based on city, DISCOM requirements (MSEDCL, BEST, TATA Power), panel type, installation site, and other applicable charges."
+    },
+    "whatIs": {
+      "heading": "What is an On-grid Solar System?",
+      "para1": "An on-grid solar system (grid-tied) connects directly to the utility grid through a bi-directional meter (net meter). Most Indian homes with a reliable grid connection choose on-grid solar since this system is powerful enough to support all household energy requirements.",
+      "para2": "The on-grid solar system is a careful compilation of many components, listed below, arranged together to convert sunlight into electricity:",
+      "list": [
+        "Solar Panels",
+        "A solar inverter",
+        "Solar module mounting structures",
+        "A bi-directional meter",
+        "Solar accessories (AC and DC cables, AC and DC combiner boxes, conduit trays, lightning arrester, MC4 connectors)"
+      ]
+    },
+    "didYouKnow": {
+      "title": "Did you know?",
+      "text": "When maintained properly, an on-grid solar system can last for 25 years. Contrary to popular belief, cleaning your panels with sprinklers can actually damage them. To keep your system operating at its peak efficiency, be sure to sign up for professional after-sales services."
+    },
+    "componentsSection": {
+      "heading": "What Are the On-Grid Solar System Components?",
+      "intro": "Here's a breakdown of how every single component in an on-grid solar system comes together to power your home.",
+      "didYouKnowTitle": "Did you know?",
+      "mountingStructurePara1": "The best solar module mounting structures are prefabricated in precision labs. They're coated with hot-dip galvanizing on steel to make them rust-proof.",
+      "mountingStructurePara2": "For instance, SolarSquare's Intelligent WindPro Mount™ 2.0 mounting structure, which is IIT-Bombay approved, can:"
+    },
+    "mountingFeatures": [
+      "Resist high wind loads and reduce vibration",
+      "Provide easy height & tilt adjustments",
+      "Ensure corrosion-free performance for decades"
+    ],
+    "accessoriesNote": "Please note: all the DC cable connections are made using MC4 connectors.",
+    "netMetering": {
+      "heading": "How Net Metering Helps",
+      "para1": "The net meter helps the discom track the power generated by the solar system, the power consumed, the power supplied to the grid, and the power imported.",
+      "para2": "At the end of every month, when the electricity bill is generated, the readings from the bidirectional meter give an account of:",
+      "list": [
+        "How many units were supplied to the grid",
+        "How many units were taken from the grid"
+      ],
+      "ifSupplyMore": "If you supply more units to the grid than you consumed: Those units will be deducted from your bill. It will reduce the bill further.",
+      "ifUseExtra": "If you use extra units from the grid: Those units would be added to your bill in addition to what your solar plant generated."
+    },
+    "howItWorks": {
+      "heading": "How Does an On-grid Solar System Work?",
+      "introPara": "Now you've seen how multiple on-grid solar system components come together, it makes sense to break down the process of sunlight getting converted into electricity.",
+      "boldHeading": "Here's how an on-grid solar system works:"
+    },
+    "subsidySection": {
+      "heading": "Solar Subsidy For On-Grid System",
+      "para": "The Indian government offers a subsidy when you install an on-grid solar system for home. This subsidy remains the same for all states in India.",
+      "table": {
+        "headers": {
+          "size": "Solar System Size",
+          "subsidy": "Solar Subsidy (PM Surya Ghar)"
+        },
+        "rows": [
+          { "size": "1 kWp", "subsidy": "Rs. 30,000" },
+          { "size": "2 kWp", "subsidy": "Rs. 60,000" },
+          { "size": "3 kWp and higher", "subsidy": "Rs. 78,000" }
+        ]
+      }
+    },
+    "advantages": {
+      "heading": "Advantages of On-Grid Solar System"
+    },
+    "limitations": {
+      "heading": "Limitation of On-Grid Solar System",
+      "powerOutagesTitle": "Power Outages",
+      "powerOutagesPara": "Although connection with the grid is a sure benefit, it's also a limitation. When there's a power cut from the grid, the on-grid solar system automatically shuts down. This interruption in the supply of power is known as a power outage.",
+      "antiIslandingTitle": "Anti-Islanding Protection",
+      "antiIslandingPara": "The main reason an on-grid solar inverter is designed to automatically shut down if the grid fails is to eliminate safety risks. This feature protects electrical maintenance personnel from electric shocks while working on the grid."
+    },
+    "comparisonBox": {
+      "title": "So, which is better: off-grid or on-grid?",
+      "para": "Hands down, on-grid solar systems in urban areas with a reliable grid are unbeatable for meeting a home's power requirements.",
+      "bullets": [
+        "No costs related to battery upkeep",
+        "More affordable than an off-grid solar system",
+        "Government offers subsidy on on-grid systems, not off-grid"
+      ],
+      "conclusion": "✅ If your power grid is reliable, investing in an on-grid solar system is the smarter choice!"
+    },
+    "installation": {
+      "heading": "How to Install an On-Grid Solar System at Home?",
+      "importantNoteTitle": "⚠️ Important Note:",
+      "importantNotePara": "Installing rooftop solar is NOT a DIY task. You must leave it in the hands of experts because it's critical to identify rooftop capacity, determine shadow-free areas, set optimal tilt angles, and carry out safe installation."
+    },
+    "whyChoose": {
+      "heading": "Why Choose Aditya Solar Energy?",
+      "tagline": "Making your journey from expensive electricity to free solar power easy!",
+      "features": {
+        "zeroInvestment": {
+          "title": "💰 Zero-Investment Solar Scheme",
+          "desc": "Easy loans and financing options where government subsidy offsets initial down payment. EMI schedules from 3 to 120 months available."
+        },
+        "swiftInstallation": {
+          "title": "⚡ Swift Installation",
+          "desc": "No middlemen involved. Complete system setup executed by our team in 8 hours."
+        },
+        "afterSales": {
+          "title": "🛠️ Solid After-Sales Support",
+          "desc": "Minimum 45 maintenance visits over 5 years for deep cleaning and preventive checks."
+        },
+        "leakageGuarantee": {
+          "title": "🛡️ Leakage-Free Guarantee",
+          "desc": "HILTI AirTight chemical anchoring protects your roof. Rs. 1 lakh guarantee for 1 year."
+        },
+        "moneyBack": {
+          "title": "💵 Money-Back Guarantee",
+          "desc": "First and only solar company in India to offer money-back guarantee at Rs. 8 per unit if we fall short on promised generation."
+        }
+      }
+    },
+    "faqs": {
+      "heading": "Frequently Asked Questions"
+    },
+    "conclusion": {
+      "heading": "Conclusion",
+      "para1": "Installing an on-grid solar system is a big decision, and it's your right to be critical about it. When you choose the right quality components, a system you install today can last for at least 25 years.",
+      "para2": "The solar panel installation cost in India varies from city to city, and you should trust a company that's highly rated by customers.",
+      "final": "☀️ The Indian government subsidy is available only till they meet the target of solarizing 1 crore homes under PM Surya Ghar Muft Bijli Yojana. Go solar now and get freedom from paying for electricity!"
+    },
+    "css": {
+      "fadeInKeyframes": "@keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }",
+      "animateClass": ".animate-fadeIn { animation: fadeIn 0.3s ease-out; }"
+    }
+  }
 
 }
 
